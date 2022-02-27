@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MyProfessional.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultMoney" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1,000,000</Value>
+    </Setting>
+    <Setting Name="Note" Type="System.String" Scope="User">
+      <Value Profile="(Default)">این یک یادداشت تست است!</Value>
+    </Setting>
+    <Setting Name="Timer" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="WarningTimer" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">تایمر استراحت چشم</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
