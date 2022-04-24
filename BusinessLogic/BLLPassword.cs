@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using DataAccess;
 using BusinessEntity;
-using BusinessEntity.Dto;
 
 namespace BusinessLogic
 {
@@ -24,9 +23,9 @@ namespace BusinessLogic
             _dalPassword.Delete(id);
         }
 
-        public Password GetById(int id)
+        public Password FindBy(int id)
         {
-            return _dalPassword.GetById(id);
+            return _dalPassword.FindBy(id);
         }
 
         public List<Password> ReadAll()

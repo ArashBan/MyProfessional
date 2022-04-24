@@ -32,17 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnPassword = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSecurity = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnTimer = new System.Windows.Forms.Button();
             this.btnMillion = new System.Windows.Forms.Button();
-            this.btnPassword = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnBackup = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnLock = new System.Windows.Forms.Button();
-            this.btnSecurity = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.btnMillion);
             this.panel1.Controls.Add(this.btnPassword);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.btnBackup);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(725, 0);
@@ -73,6 +73,27 @@
             this.panel4.Size = new System.Drawing.Size(5, 65);
             this.panel4.TabIndex = 7;
             // 
+            // btnPassword
+            // 
+            this.btnPassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPassword.FlatAppearance.BorderSize = 0;
+            this.btnPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPassword.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPassword.Image = global::MyProfessional.Properties.Resources.Password;
+            this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPassword.Location = new System.Drawing.Point(0, 139);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Padding = new System.Windows.Forms.Padding(11, 0, 26, 0);
+            this.btnPassword.Size = new System.Drawing.Size(200, 65);
+            this.btnPassword.TabIndex = 2;
+            this.btnPassword.Text = "پسوورد     ";
+            this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPassword.UseVisualStyleBackColor = true;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btnLock);
@@ -85,6 +106,23 @@
             this.panel2.Size = new System.Drawing.Size(200, 74);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // btnSecurity
+            // 
+            this.btnSecurity.FlatAppearance.BorderSize = 2;
+            this.btnSecurity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnSecurity.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnSecurity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSecurity.Font = new System.Drawing.Font("Sahel", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSecurity.Image = global::MyProfessional.Properties.Resources.SecurityOff;
+            this.btnSecurity.Location = new System.Drawing.Point(12, 13);
+            this.btnSecurity.Name = "btnSecurity";
+            this.btnSecurity.Size = new System.Drawing.Size(35, 35);
+            this.btnSecurity.TabIndex = 0;
+            this.btnSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSecurity.UseVisualStyleBackColor = true;
+            this.btnSecurity.Click += new System.EventHandler(this.btnSecurity_Click);
             // 
             // btnMinimize
             // 
@@ -104,9 +142,9 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(728, 549);
+            this.panel3.Size = new System.Drawing.Size(725, 550);
             this.panel3.TabIndex = 0;
             // 
             // timer1
@@ -157,27 +195,6 @@
             this.btnMillion.UseVisualStyleBackColor = true;
             this.btnMillion.Click += new System.EventHandler(this.btnMillion_Click);
             // 
-            // btnPassword
-            // 
-            this.btnPassword.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPassword.FlatAppearance.BorderSize = 0;
-            this.btnPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassword.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnPassword.Image = global::MyProfessional.Properties.Resources.Passwordd;
-            this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPassword.Location = new System.Drawing.Point(0, 139);
-            this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Padding = new System.Windows.Forms.Padding(11, 0, 26, 0);
-            this.btnPassword.Size = new System.Drawing.Size(200, 65);
-            this.btnPassword.TabIndex = 2;
-            this.btnPassword.Text = "پسوورد     ";
-            this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPassword.UseVisualStyleBackColor = true;
-            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
-            // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,26 +216,26 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnBackup
+            // btnSettings
             // 
-            this.btnBackup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBackup.FlatAppearance.BorderSize = 0;
-            this.btnBackup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnBackup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackup.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnBackup.Image = global::MyProfessional.Properties.Resources.Settings;
-            this.btnBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBackup.Location = new System.Drawing.Point(0, 485);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Padding = new System.Windows.Forms.Padding(0, 0, 28, 0);
-            this.btnBackup.Size = new System.Drawing.Size(200, 65);
-            this.btnBackup.TabIndex = 6;
-            this.btnBackup.Text = "تنظیمات      ";
-            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBackup.UseVisualStyleBackColor = true;
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSettings.Image = global::MyProfessional.Properties.Resources.Settings;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 485);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(0, 0, 28, 0);
+            this.btnSettings.Size = new System.Drawing.Size(200, 65);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "تنظیمات      ";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnLock
             // 
@@ -236,24 +253,6 @@
             this.btnLock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLock.UseVisualStyleBackColor = true;
             this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
-            // 
-            // btnSecurity
-            // 
-            this.btnSecurity.FlatAppearance.BorderSize = 2;
-            this.btnSecurity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnSecurity.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnSecurity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecurity.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
-            this.btnSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSecurity.Image = global::MyProfessional.Properties.Resources.SecurityOff;
-            this.btnSecurity.Location = new System.Drawing.Point(12, 13);
-            this.btnSecurity.Name = "btnSecurity";
-            this.btnSecurity.Size = new System.Drawing.Size(35, 35);
-            this.btnSecurity.TabIndex = 0;
-            this.btnSecurity.Text = " ";
-            this.btnSecurity.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSecurity.UseVisualStyleBackColor = true;
-            this.btnSecurity.Click += new System.EventHandler(this.btnSecurity_Click);
             // 
             // btnExit
             // 
@@ -301,19 +300,19 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnMillion;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnTimer;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnPassword;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Button btnSecurity;
         public System.Windows.Forms.Button btnLock;
+        private System.Windows.Forms.Button btnMillion;
+        private System.Windows.Forms.Button btnPassword;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

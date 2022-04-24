@@ -7,21 +7,19 @@ using Microsoft.SqlServer.Management.Smo;
 
 namespace MyProfessional
 {
-    public partial class ucSettings : UserControl
+    public partial class UcSettings : UserControl
     {
-        public ucSettings()
+        public UcSettings()
         {
             InitializeComponent();
         }
 
         #region Connection Strings
-
         private readonly string _backupConString =
-            @"data source=(local);initial catalog=MyProfessional;integrated security=True;multipleactiveresultsets=True";
+            "Data Source=(local); Initial Catalog=MyProfessional; Integrated Security=True; MultipleActiveResultSets=True";
 
         private readonly string _restoreConString =
-            "Data Source=(local);Initial Catalog=master;Integrated Security=True";
-
+            "Data Source=(local); Initial Catalog=master; Integrated Security=True";
         #endregion
 
         private void btnBackup_Click(object sender, EventArgs e)
@@ -49,22 +47,24 @@ namespace MyProfessional
                             var bkpDevice = new BackupDeviceItem(sfd.FileName, DeviceType.File);
                             bkpDatabase.Devices.Add(bkpDevice);
                             bkpDatabase.SqlBackup(srvr);
-                            CustomMessageBox.ShowMessageBox("!فایل بکاپ با موفقیت ذخیره شد",
-                                CustomMessageBox.Conditions.Information);
+                            _ = CustomMessageBox.ShowMessageBox("!فایل بکاپ با موفقیت ذخیره شد",
+                                CustomMessageBox.Status.Information);
                         }
                     }
-                    catch (Exception) { CustomMessageBox.ShowMessageBox("!فایل بکاپ را در درایوی غیر از درایو ویندوز ذخیره کنید",
-                            CustomMessageBox.Conditions.Error); }
+                    catch (Exception)
+                    {
+                        _ = CustomMessageBox.ShowMessageBox("!فایل بکاپ را در درایوی غیر از درایو ویندوز ذخیره کنید",
+            CustomMessageBox.Status.Error);
+                    }
                 }
             }
         }
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            DialogResult Check = CustomMessageBox.ShowMessageBox(
-                "!!!ممکن است تمامی اطلاعات موجود در دیتابیس شما تغییر کند \n !اگر مشکلی با این مورد ندارید بله را انتخاب کنید",
-                CustomMessageBox.Conditions.Warning, MessageBoxButtons.YesNo);
-            if (Check == DialogResult.Yes)
+            if (CustomMessageBox.ShowMessageBox(
+                    "!ممکن است تمامی اطلاعات موجود در دیتابیس شما تغییر کند\n.را انتخاب کنید Yes اگر مشکلی با این مورد ندارید",
+                    CustomMessageBox.Status.Warning, MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 SqlConnection.ClearAllPools();
                 using (var con = new SqlConnection(_restoreConString))
@@ -81,21 +81,24 @@ namespace MyProfessional
                                 Action = RestoreActionType.Database,
                                 Database = "MyProfessional"
                             };
-                            var opfd = new OpenFileDialog
+                            var ofd = new OpenFileDialog
                             {
                                 Filter = "Backup File|*.ARADB"
                             };
-                            if (opfd.ShowDialog() == DialogResult.OK)
+                            if (ofd.ShowDialog() == DialogResult.OK)
                             {
-                                var bkpDevice = new BackupDeviceItem(opfd.FileName, DeviceType.File);
+                                var bkpDevice = new BackupDeviceItem(ofd.FileName, DeviceType.File);
                                 rstDatabase.Devices.Add(bkpDevice);
                                 rstDatabase.ReplaceDatabase = true;
                                 rstDatabase.SqlRestore(srvr);
-                                CustomMessageBox.ShowMessageBox("!اطلاعات با موفقیت بازیابی شد",
-                                    CustomMessageBox.Conditions.Information);
+                                _ = CustomMessageBox.ShowMessageBox("!اطلاعات با موفقیت بازیابی شد",
+                                    CustomMessageBox.Status.Information);
                             }
                         }
-                        catch (Exception f) { CustomMessageBox.ShowMessageBox(f.ToString(), CustomMessageBox.Conditions.Error); }
+                        catch (Exception f)
+                        {
+                            _ = CustomMessageBox.ShowMessageBox(f.ToString(), CustomMessageBox.Status.Error);
+                        }
                     }
                 }
             }

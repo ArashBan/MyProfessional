@@ -82,5 +82,173 @@ namespace MyProfessional.Properties {
                 this["Title"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Arash\\source\\repos")]
+        public string QuickAccessAddress1 {
+            get {
+                return ((string)(this["QuickAccessAddress1"]));
+            }
+            set {
+                this["QuickAccessAddress1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Programming\\Supporting")]
+        public string QuickAccessAddress2 {
+            get {
+                return ((string)(this["QuickAccessAddress2"]));
+            }
+            set {
+                this["QuickAccessAddress2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Programming\\Supporting\\برنامه هفتگی.pdf")]
+        public string QuickAccessAddress3 {
+            get {
+                return ((string)(this["QuickAccessAddress3"]));
+            }
+            set {
+                this["QuickAccessAddress3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\University\\ترم سوم")]
+        public string QuickAccessAddress4 {
+            get {
+                return ((string)(this["QuickAccessAddress4"]));
+            }
+            set {
+                this["QuickAccessAddress4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Programming\\Education\\Coding\\Atria\\ASP.NET")]
+        public string QuickAccessAddress5 {
+            get {
+                return ((string)(this["QuickAccessAddress5"]));
+            }
+            set {
+                this["QuickAccessAddress5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Film\\سریال ایرانی")]
+        public string QuickAccessAddress6 {
+            get {
+                return ((string)(this["QuickAccessAddress6"]));
+            }
+            set {
+                this["QuickAccessAddress6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Film\\Vikings")]
+        public string QuickAccessAddress7 {
+            get {
+                return ((string)(this["QuickAccessAddress7"]));
+            }
+            set {
+                this["QuickAccessAddress7"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("پروژه های ویژوال استودیو")]
+        public string QuickAccessName1 {
+            get {
+                return ((string)(this["QuickAccessName1"]));
+            }
+            set {
+                this["QuickAccessName1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("پشتیبانی")]
+        public string QuickAccessName2 {
+            get {
+                return ((string)(this["QuickAccessName2"]));
+            }
+            set {
+                this["QuickAccessName2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("برنامه هفتگی")]
+        public string QuickAccessName3 {
+            get {
+                return ((string)(this["QuickAccessName3"]));
+            }
+            set {
+                this["QuickAccessName3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("دانشگاه")]
+        public string QuickAccessName4 {
+            get {
+                return ((string)(this["QuickAccessName4"]));
+            }
+            set {
+                this["QuickAccessName4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("دوره آتریا")]
+        public string QuickAccessName5 {
+            get {
+                return ((string)(this["QuickAccessName5"]));
+            }
+            set {
+                this["QuickAccessName5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("فیلم و سریال ایرانی")]
+        public string QuickAccessName6 {
+            get {
+                return ((string)(this["QuickAccessName6"]));
+            }
+            set {
+                this["QuickAccessName6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("سریال وایکینگز")]
+        public string QuickAccessName7 {
+            get {
+                return ((string)(this["QuickAccessName7"]));
+            }
+            set {
+                this["QuickAccessName7"] = value;
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace MyProfessional
 {
-    partial class ucPassword
+    partial class UcPassword
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,21 +30,16 @@ namespace MyProfessional
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCopy = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.dgvPassword = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TextPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ویرایشسطرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفسطرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +54,12 @@ namespace MyProfessional
             this.btnRegist = new System.Windows.Forms.Button();
             this.rdbSpecialAlgorithm = new System.Windows.Forms.RadioButton();
             this.rdbRandomAlgorithm = new System.Windows.Forms.RadioButton();
-            this.rdbFixedAlgorithm = new System.Windows.Forms.RadioButton();
+            this.rdbNoneAlgorithm = new System.Windows.Forms.RadioButton();
+            this.TextPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiteName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPassword)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -106,17 +106,17 @@ namespace MyProfessional
             this.dgvPassword.AllowUserToAddRows = false;
             this.dgvPassword.AllowUserToDeleteRows = false;
             this.dgvPassword.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sahel SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPassword.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Sahel SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPassword.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvPassword.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPassword.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPassword.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPassword.ColumnHeadersHeight = 50;
             this.dgvPassword.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPassword.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -136,60 +136,6 @@ namespace MyProfessional
             this.dgvPassword.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPassword_CellClick);
             this.dgvPassword.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPassword_CellDoubleClick);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 125;
-            // 
-            // SiteName
-            // 
-            this.SiteName.DataPropertyName = "SiteName";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SiteName.DefaultCellStyle = dataGridViewCellStyle9;
-            this.SiteName.HeaderText = " نام سایت";
-            this.SiteName.MinimumWidth = 140;
-            this.SiteName.Name = "SiteName";
-            this.SiteName.ReadOnly = true;
-            this.SiteName.Width = 140;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Username.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Username.HeaderText = "  یوزرنیم";
-            this.Username.MinimumWidth = 139;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            this.Username.Width = 139;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Email.HeaderText = "  ایمیل";
-            this.Email.MinimumWidth = 240;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 240;
-            // 
-            // TextPassword
-            // 
-            this.TextPassword.DataPropertyName = "TextPassword";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TextPassword.DefaultCellStyle = dataGridViewCellStyle12;
-            this.TextPassword.HeaderText = "   پسوورد";
-            this.TextPassword.MinimumWidth = 180;
-            this.TextPassword.Name = "TextPassword";
-            this.TextPassword.ReadOnly = true;
-            this.TextPassword.Width = 180;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,32 +146,35 @@ namespace MyProfessional
             this.کپیکردنسطرهاToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(221, 112);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(225, 112);
             // 
             // ویرایشسطرToolStripMenuItem
             // 
+            this.ویرایشسطرToolStripMenuItem.Image = global::MyProfessional.Properties.Resources.Edit;
             this.ویرایشسطرToolStripMenuItem.Name = "ویرایشسطرToolStripMenuItem";
-            this.ویرایشسطرToolStripMenuItem.Size = new System.Drawing.Size(220, 36);
+            this.ویرایشسطرToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.ویرایشسطرToolStripMenuItem.Text = "ویرایش سطر";
             this.ویرایشسطرToolStripMenuItem.Click += new System.EventHandler(this.ویرایشسطرToolStripMenuItem_Click);
             // 
             // حذفسطرToolStripMenuItem
             // 
+            this.حذفسطرToolStripMenuItem.Image = global::MyProfessional.Properties.Resources.Delete;
             this.حذفسطرToolStripMenuItem.Name = "حذفسطرToolStripMenuItem";
-            this.حذفسطرToolStripMenuItem.Size = new System.Drawing.Size(220, 36);
+            this.حذفسطرToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.حذفسطرToolStripMenuItem.Text = "حذف سطر";
             this.حذفسطرToolStripMenuItem.Click += new System.EventHandler(this.حذفسطرToolStripMenuItem_Click);
             // 
             // کپیکردنسطرهاToolStripMenuItem
             // 
+            this.کپیکردنسطرهاToolStripMenuItem.Image = global::MyProfessional.Properties.Resources.Copy;
             this.کپیکردنسطرهاToolStripMenuItem.Name = "کپیکردنسطرهاToolStripMenuItem";
-            this.کپیکردنسطرهاToolStripMenuItem.Size = new System.Drawing.Size(220, 36);
+            this.کپیکردنسطرهاToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.کپیکردنسطرهاToolStripMenuItem.Text = "کپی کردن سطرها";
             this.کپیکردنسطرهاToolStripMenuItem.Click += new System.EventHandler(this.کپیکردنسطرهاToolStripMenuItem_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(28, 121);
+            this.txtEmail.Location = new System.Drawing.Point(32, 121);
             this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -237,7 +186,7 @@ namespace MyProfessional
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblEmail.Location = new System.Drawing.Point(289, 123);
+            this.lblEmail.Location = new System.Drawing.Point(293, 123);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 31);
             this.lblEmail.TabIndex = 11;
@@ -247,7 +196,7 @@ namespace MyProfessional
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblUsername.Location = new System.Drawing.Point(284, 76);
+            this.lblUsername.Location = new System.Drawing.Point(288, 76);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(71, 31);
             this.lblUsername.TabIndex = 10;
@@ -265,7 +214,7 @@ namespace MyProfessional
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(28, 76);
+            this.txtUsername.Location = new System.Drawing.Point(32, 76);
             this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -286,6 +235,7 @@ namespace MyProfessional
             // 
             // btnChangePassword
             // 
+            this.btnChangePassword.Enabled = false;
             this.btnChangePassword.FlatAppearance.BorderSize = 2;
             this.btnChangePassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnChangePassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
@@ -306,7 +256,7 @@ namespace MyProfessional
             this.btnRegist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnRegist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRegist.Location = new System.Drawing.Point(28, 166);
+            this.btnRegist.Location = new System.Drawing.Point(32, 166);
             this.btnRegist.Name = "btnRegist";
             this.btnRegist.Size = new System.Drawing.Size(250, 40);
             this.btnRegist.TabIndex = 6;
@@ -316,45 +266,105 @@ namespace MyProfessional
             // 
             // rdbSpecialAlgorithm
             // 
-            this.rdbSpecialAlgorithm.Checked = true;
+            this.rdbSpecialAlgorithm.AutoSize = true;
+            this.rdbSpecialAlgorithm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbSpecialAlgorithm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.rdbSpecialAlgorithm.Location = new System.Drawing.Point(480, 18);
+            this.rdbSpecialAlgorithm.Location = new System.Drawing.Point(492, 22);
             this.rdbSpecialAlgorithm.Name = "rdbSpecialAlgorithm";
-            this.rdbSpecialAlgorithm.Size = new System.Drawing.Size(144, 35);
+            this.rdbSpecialAlgorithm.Size = new System.Drawing.Size(143, 35);
             this.rdbSpecialAlgorithm.TabIndex = 0;
-            this.rdbSpecialAlgorithm.TabStop = true;
             this.rdbSpecialAlgorithm.Text = "الگوریتم خاص";
             this.rdbSpecialAlgorithm.UseVisualStyleBackColor = true;
             this.rdbSpecialAlgorithm.CheckedChanged += new System.EventHandler(this.rdbSpecialAlgorithm_CheckedChanged);
             // 
             // rdbRandomAlgorithm
             // 
+            this.rdbRandomAlgorithm.AutoSize = true;
+            this.rdbRandomAlgorithm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbRandomAlgorithm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.rdbRandomAlgorithm.Location = new System.Drawing.Point(290, 18);
+            this.rdbRandomAlgorithm.Location = new System.Drawing.Point(291, 22);
             this.rdbRandomAlgorithm.Name = "rdbRandomAlgorithm";
-            this.rdbRandomAlgorithm.Size = new System.Drawing.Size(144, 35);
+            this.rdbRandomAlgorithm.Size = new System.Drawing.Size(142, 35);
             this.rdbRandomAlgorithm.TabIndex = 0;
             this.rdbRandomAlgorithm.Text = "الگوریتم رندوم";
             this.rdbRandomAlgorithm.UseVisualStyleBackColor = true;
             this.rdbRandomAlgorithm.CheckedChanged += new System.EventHandler(this.rdbRandomAlgorithm_CheckedChanged);
             // 
-            // rdbFixedAlgorithm
+            // rdbNoneAlgorithm
             // 
-            this.rdbFixedAlgorithm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.rdbFixedAlgorithm.Location = new System.Drawing.Point(98, 18);
-            this.rdbFixedAlgorithm.Name = "rdbFixedAlgorithm";
-            this.rdbFixedAlgorithm.Size = new System.Drawing.Size(136, 35);
-            this.rdbFixedAlgorithm.TabIndex = 0;
-            this.rdbFixedAlgorithm.Text = "الگوریتم ثابت";
-            this.rdbFixedAlgorithm.UseVisualStyleBackColor = true;
-            this.rdbFixedAlgorithm.CheckedChanged += new System.EventHandler(this.rdbFixedAlgorithm_CheckedChanged);
+            this.rdbNoneAlgorithm.AutoSize = true;
+            this.rdbNoneAlgorithm.Checked = true;
+            this.rdbNoneAlgorithm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdbNoneAlgorithm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.rdbNoneAlgorithm.Location = new System.Drawing.Point(93, 22);
+            this.rdbNoneAlgorithm.Name = "rdbNoneAlgorithm";
+            this.rdbNoneAlgorithm.Size = new System.Drawing.Size(139, 35);
+            this.rdbNoneAlgorithm.TabIndex = 0;
+            this.rdbNoneAlgorithm.TabStop = true;
+            this.rdbNoneAlgorithm.Text = "بدون الگوریتم";
+            this.rdbNoneAlgorithm.UseVisualStyleBackColor = true;
+            this.rdbNoneAlgorithm.CheckedChanged += new System.EventHandler(this.rdbNoneAlgorithm_CheckedChanged);
             // 
-            // ucPassword
+            // TextPassword
+            // 
+            this.TextPassword.DataPropertyName = "TextPassword";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TextPassword.DefaultCellStyle = dataGridViewCellStyle18;
+            this.TextPassword.HeaderText = "   پسوورد";
+            this.TextPassword.MinimumWidth = 180;
+            this.TextPassword.Name = "TextPassword";
+            this.TextPassword.ReadOnly = true;
+            this.TextPassword.Width = 180;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle17;
+            this.Email.HeaderText = "  ایمیل";
+            this.Email.MinimumWidth = 240;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 240;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Username.DefaultCellStyle = dataGridViewCellStyle16;
+            this.Username.HeaderText = "  یوزرنیم";
+            this.Username.MinimumWidth = 139;
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Width = 139;
+            // 
+            // SiteName
+            // 
+            this.SiteName.DataPropertyName = "SiteName";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SiteName.DefaultCellStyle = dataGridViewCellStyle15;
+            this.SiteName.HeaderText = " نام سایت";
+            this.SiteName.MinimumWidth = 140;
+            this.SiteName.Name = "SiteName";
+            this.SiteName.ReadOnly = true;
+            this.SiteName.Width = 140;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // UcPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.rdbFixedAlgorithm);
+            this.Controls.Add(this.rdbNoneAlgorithm);
             this.Controls.Add(this.rdbRandomAlgorithm);
             this.Controls.Add(this.rdbSpecialAlgorithm);
             this.Controls.Add(this.btnCopy);
@@ -371,10 +381,10 @@ namespace MyProfessional
             this.Controls.Add(this.btnRegist);
             this.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Name = "ucPassword";
+            this.Name = "UcPassword";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(728, 549);
-            this.Load += new System.EventHandler(this.ucPassword_Load);
+            this.Load += new System.EventHandler(this.UcPassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPassword)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -394,18 +404,18 @@ namespace MyProfessional
         private System.Windows.Forms.TextBox txtSiteName;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnRegist;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SiteName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TextPassword;
         private System.Windows.Forms.RadioButton rdbSpecialAlgorithm;
         private System.Windows.Forms.RadioButton rdbRandomAlgorithm;
-        private System.Windows.Forms.RadioButton rdbFixedAlgorithm;
+        private System.Windows.Forms.RadioButton rdbNoneAlgorithm;
         public System.Windows.Forms.DataGridView dgvPassword;
         public System.Windows.Forms.ToolStripMenuItem ویرایشسطرToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem حذفسطرToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem کپیکردنسطرهاToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SiteName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TextPassword;
     }
 }

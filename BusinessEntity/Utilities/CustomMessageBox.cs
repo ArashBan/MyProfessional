@@ -4,22 +4,22 @@ namespace BusinessEntity.Utilities
 {
     public static class CustomMessageBox
     {
-        public static DialogResult ShowMessageBox(string text, Conditions condition, MessageBoxButtons buttons = MessageBoxButtons.OK)
+        public static DialogResult ShowMessageBox(string text, Status status, MessageBoxButtons buttons = MessageBoxButtons.OK)
         {
-            switch (condition)
+            switch (status)
             {
-                case Conditions.Information:
+                case Status.Information:
                     return MessageBox.Show(text, "Done!", buttons, MessageBoxIcon.Information);
-                case Conditions.Warning:
+                case Status.Warning:
                     return MessageBox.Show(text, "Warning!", buttons, MessageBoxIcon.Warning);
                 default:
                     return MessageBox.Show(text, "Error!", buttons, MessageBoxIcon.Error);
             }
-            //if (condition == Conditions.Information)
+            //if (status == Status.Information)
             //{
             //    return MessageBox.Show(text, "Information!", buttons, MessageBoxIcon.Information);
             //}
-            //else if (condition == Conditions.Warning)
+            //else if (status == Status.Warning)
             //{
             //    return MessageBox.Show(text, "Warning!", buttons, MessageBoxIcon.Warning);
             //}
@@ -29,7 +29,7 @@ namespace BusinessEntity.Utilities
             //}
         }
 
-        public enum Conditions
+        public enum Status
         {
             Information, Warning, Error
         }

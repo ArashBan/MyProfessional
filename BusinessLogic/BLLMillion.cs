@@ -29,9 +29,9 @@ namespace BusinessLogic
             return _dalMillion.ReadAll();
         }
 
-        public Million GetById(int id)
+        public Million FindBy(int id)
         {
-            return _dalMillion.GetById(id);
+            return _dalMillion.FindBy(id);
         }
 
         public double SumMoney()

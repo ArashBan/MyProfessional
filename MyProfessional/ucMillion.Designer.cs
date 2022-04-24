@@ -1,7 +1,7 @@
 ﻿
 namespace MyProfessional
 {
-    partial class ucMillion
+    partial class UcMillion
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,13 +30,13 @@ namespace MyProfessional
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtMoney = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@ namespace MyProfessional
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTitle.Location = new System.Drawing.Point(629, 24);
+            this.lblTitle.Location = new System.Drawing.Point(626, 24);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(62, 31);
             this.lblTitle.TabIndex = 8;
@@ -78,7 +78,7 @@ namespace MyProfessional
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(347, 24);
+            this.txtTitle.Location = new System.Drawing.Point(349, 24);
             this.txtTitle.MaxLength = 30;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(250, 39);
@@ -87,7 +87,7 @@ namespace MyProfessional
             // 
             // txtMoney
             // 
-            this.txtMoney.Location = new System.Drawing.Point(347, 69);
+            this.txtMoney.Location = new System.Drawing.Point(349, 69);
             this.txtMoney.MaxLength = 11;
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(250, 39);
@@ -100,7 +100,7 @@ namespace MyProfessional
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblMoney.Location = new System.Drawing.Point(603, 69);
+            this.lblMoney.Location = new System.Drawing.Point(605, 69);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(114, 31);
             this.lblMoney.TabIndex = 9;
@@ -115,7 +115,7 @@ namespace MyProfessional
             this.cmbYear.Items.AddRange(new object[] {
             "1400",
             "1401"});
-            this.cmbYear.Location = new System.Drawing.Point(27, 114);
+            this.cmbYear.Location = new System.Drawing.Point(29, 114);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(250, 39);
             this.cmbYear.TabIndex = 2;
@@ -139,7 +139,7 @@ namespace MyProfessional
             "دی",
             "بهمن",
             "اسفند"});
-            this.cmbMonth.Location = new System.Drawing.Point(27, 69);
+            this.cmbMonth.Location = new System.Drawing.Point(29, 69);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(250, 39);
             this.cmbMonth.TabIndex = 3;
@@ -183,7 +183,7 @@ namespace MyProfessional
             "29",
             "30",
             "31"});
-            this.cmbDay.Location = new System.Drawing.Point(27, 24);
+            this.cmbDay.Location = new System.Drawing.Point(29, 24);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(250, 39);
             this.cmbDay.TabIndex = 4;
@@ -195,7 +195,7 @@ namespace MyProfessional
             this.btnRegist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnRegist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRegist.Location = new System.Drawing.Point(347, 114);
+            this.btnRegist.Location = new System.Drawing.Point(349, 114);
             this.btnRegist.Name = "btnRegist";
             this.btnRegist.Size = new System.Drawing.Size(250, 40);
             this.btnRegist.TabIndex = 6;
@@ -211,14 +211,14 @@ namespace MyProfessional
             this.lblDefaultMoney.Name = "lblDefaultMoney";
             this.lblDefaultMoney.Size = new System.Drawing.Size(431, 67);
             this.lblDefaultMoney.TabIndex = 0;
-            this.lblDefaultMoney.Text = "مجموع درآمدها";
+            this.lblDefaultMoney.Text = "مجموع ميليون!";
             this.lblDefaultMoney.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblYear.Location = new System.Drawing.Point(286, 114);
+            this.lblYear.Location = new System.Drawing.Point(291, 114);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(52, 31);
             this.lblYear.TabIndex = 10;
@@ -228,7 +228,7 @@ namespace MyProfessional
             // 
             this.lblMonth.AutoSize = true;
             this.lblMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblMonth.Location = new System.Drawing.Point(291, 70);
+            this.lblMonth.Location = new System.Drawing.Point(294, 70);
             this.lblMonth.Name = "lblMonth";
             this.lblMonth.Size = new System.Drawing.Size(43, 31);
             this.lblMonth.TabIndex = 11;
@@ -238,7 +238,7 @@ namespace MyProfessional
             // 
             this.lblDay.AutoSize = true;
             this.lblDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblDay.Location = new System.Drawing.Point(292, 24);
+            this.lblDay.Location = new System.Drawing.Point(294, 24);
             this.lblDay.Name = "lblDay";
             this.lblDay.Size = new System.Drawing.Size(41, 31);
             this.lblDay.TabIndex = 12;
@@ -249,17 +249,17 @@ namespace MyProfessional
             this.dgvMillion.AllowUserToAddRows = false;
             this.dgvMillion.AllowUserToDeleteRows = false;
             this.dgvMillion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sahel SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMillion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sahel SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMillion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMillion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvMillion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvMillion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvMillion.ColumnHeadersHeight = 50;
             this.dgvMillion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMillion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -292,8 +292,8 @@ namespace MyProfessional
             // Title
             // 
             this.Title.DataPropertyName = "Title";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Title.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Title.DefaultCellStyle = dataGridViewCellStyle10;
             this.Title.HeaderText = "   عنوان";
             this.Title.MinimumWidth = 200;
             this.Title.Name = "Title";
@@ -303,8 +303,8 @@ namespace MyProfessional
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Money";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn3.HeaderText = "   مبلغ (تومان)";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 200;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -315,8 +315,8 @@ namespace MyProfessional
             // 
             this.Day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Day.DataPropertyName = "Day";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Day.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Day.DefaultCellStyle = dataGridViewCellStyle12;
             this.Day.HeaderText = "   روز";
             this.Day.MinimumWidth = 100;
             this.Day.Name = "Day";
@@ -327,8 +327,8 @@ namespace MyProfessional
             // 
             this.Month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Month.DataPropertyName = "Month";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Month.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Month.DefaultCellStyle = dataGridViewCellStyle13;
             this.Month.HeaderText = "   ماه";
             this.Month.MinimumWidth = 100;
             this.Month.Name = "Month";
@@ -339,8 +339,8 @@ namespace MyProfessional
             // 
             this.Year.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Year.DataPropertyName = "Year";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Year.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Year.DefaultCellStyle = dataGridViewCellStyle14;
             this.Year.HeaderText = "   سال";
             this.Year.MinimumWidth = 99;
             this.Year.Name = "Year";
@@ -356,19 +356,21 @@ namespace MyProfessional
             this.حذفسطرToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(189, 76);
             // 
             // ویرایشسطرToolStripMenuItem
             // 
+            this.ویرایشسطرToolStripMenuItem.Image = global::MyProfessional.Properties.Resources.Edit;
             this.ویرایشسطرToolStripMenuItem.Name = "ویرایشسطرToolStripMenuItem";
-            this.ویرایشسطرToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.ویرایشسطرToolStripMenuItem.Size = new System.Drawing.Size(188, 36);
             this.ویرایشسطرToolStripMenuItem.Text = "ویرایش سطر";
             this.ویرایشسطرToolStripMenuItem.Click += new System.EventHandler(this.ویرایشسطرToolStripMenuItem_Click);
             // 
             // حذفسطرToolStripMenuItem
             // 
+            this.حذفسطرToolStripMenuItem.Image = global::MyProfessional.Properties.Resources.Delete;
             this.حذفسطرToolStripMenuItem.Name = "حذفسطرToolStripMenuItem";
-            this.حذفسطرToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.حذفسطرToolStripMenuItem.Size = new System.Drawing.Size(188, 36);
             this.حذفسطرToolStripMenuItem.Text = "حذف سطر";
             this.حذفسطرToolStripMenuItem.Click += new System.EventHandler(this.حذفسطرToolStripMenuItem_Click);
             // 
@@ -377,7 +379,7 @@ namespace MyProfessional
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lblDefaultMoney);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(285, 162);
+            this.panel1.Location = new System.Drawing.Point(286, 162);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 67);
             this.panel1.TabIndex = 25;
@@ -385,7 +387,7 @@ namespace MyProfessional
             // txtDefaultMoney
             // 
             this.txtDefaultMoney.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::MyProfessional.Properties.Settings.Default, "DefaultMoney", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtDefaultMoney.Location = new System.Drawing.Point(27, 175);
+            this.txtDefaultMoney.Location = new System.Drawing.Point(29, 175);
             this.txtDefaultMoney.MaxLength = 11;
             this.txtDefaultMoney.Name = "txtDefaultMoney";
             this.txtDefaultMoney.Size = new System.Drawing.Size(250, 39);
@@ -395,7 +397,7 @@ namespace MyProfessional
             this.txtDefaultMoney.TextChanged += new System.EventHandler(this.txtDefault_TextChanged);
             this.txtDefaultMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDefaultMoney_KeyPress);
             // 
-            // ucMillion
+            // UcMillion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -416,10 +418,10 @@ namespace MyProfessional
             this.Controls.Add(this.txtTitle);
             this.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Name = "ucMillion";
+            this.Name = "UcMillion";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Size = new System.Drawing.Size(728, 549);
-            this.Load += new System.EventHandler(this.ucMillion_Load);
+            this.Size = new System.Drawing.Size(725, 550);
+            this.Load += new System.EventHandler(this.UcMillion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMillion)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

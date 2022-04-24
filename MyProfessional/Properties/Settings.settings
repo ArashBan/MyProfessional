@@ -17,5 +17,47 @@
     <Setting Name="Title" Type="System.String" Scope="User">
       <Value Profile="(Default)">تایمر استراحت چشم</Value>
     </Setting>
+    <Setting Name="QuickAccessAddress1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Arash\source\repos</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Programming\Supporting</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Programming\Supporting\برنامه هفتگی.pdf</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\University\ترم سوم</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Programming\Education\Coding\Atria\ASP.NET</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Film\سریال ایرانی</Value>
+    </Setting>
+    <Setting Name="QuickAccessAddress7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Film\Vikings</Value>
+    </Setting>
+    <Setting Name="QuickAccessName1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">پروژه های ویژوال استودیو</Value>
+    </Setting>
+    <Setting Name="QuickAccessName2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">پشتیبانی</Value>
+    </Setting>
+    <Setting Name="QuickAccessName3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">برنامه هفتگی</Value>
+    </Setting>
+    <Setting Name="QuickAccessName4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">دانشگاه</Value>
+    </Setting>
+    <Setting Name="QuickAccessName5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">دوره آتریا</Value>
+    </Setting>
+    <Setting Name="QuickAccessName6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">فیلم و سریال ایرانی</Value>
+    </Setting>
+    <Setting Name="QuickAccessName7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">سریال وایکینگز</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

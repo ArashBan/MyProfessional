@@ -2,6 +2,13 @@
 {
     public class Password
     {
+        public int Id { get; set; }
+        public string SiteName { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string TextPassword { get; set; }
+        //public bool IsDeleted { get; set; }
+
         public Password(string sitename, string username, string email, string textpassword)
         {
             SiteName = sitename;
@@ -11,11 +18,5 @@
         }
 
         protected Password() { }
-
-        public int Id { get; set; }
-        public string SiteName { get; set; }
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string TextPassword { get; set; }
     }
 }

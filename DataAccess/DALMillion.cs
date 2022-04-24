@@ -28,7 +28,7 @@ namespace DataAccess
 
         public void Delete(int id)
         {
-            Million million = GetById(id);
+            Million million = FindBy(id);
             _db.Millions.Remove(million);
             _db.SaveChanges();
         }
@@ -52,7 +52,7 @@ namespace DataAccess
             return result;
         }
 
-        public Million GetById(int id)
+        public Million FindBy(int id)
         {
             return _db.Millions.FirstOrDefault(i => i.Id == id);
         }

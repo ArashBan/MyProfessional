@@ -4,21 +4,23 @@ using System.Windows.Forms;
 using BusinessEntity;
 using BusinessLogic;
 using BusinessEntity.Utilities;
+using System.Drawing;
 
 namespace MyProfessional
 {
-    public partial class ucPassword : UserControl
+    public partial class UcPassword : UserControl
     {
-        public ucPassword()
+        public UcPassword()
         {
             InitializeComponent();
         }
 
-        public readonly BLLPassword bllPassword = new BLLPassword();
+        public readonly BLLPassword BllPassword = new BLLPassword();
         private int _selectedId;
         private int _selectedRowNumber;
+        public string securityStatusPassword = "Off";
 
-        private void _clearControllers()
+        private void ClearControllers()
         {
             foreach (Control control in Controls)
             {
@@ -28,20 +30,20 @@ namespace MyProfessional
                         textbox.Clear();
                         break;
                 }
-                rdbSpecialAlgorithm.Checked = true;
             }
+            rdbNoneAlgorithm.Checked = true;
         }
 
-        private void _makeSpecialPassword()
+        private void MakeSpecialPassword()
         {
             try
             {
-                // @Di-64#%41-La!
+                // ¶∆∆-€€¶¶€€-∆∆!
                 // =Di-64#%49-la!
                 // 13 - 17 = *
 
-                var ShapeSample = "=#%@";
-                var WordSample = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+                var shapeSample = "=#%@";
+                //var wordSample = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
                 var firstOneCharLower = txtSiteName.Text.Substring(0, 1).ToLower();
                 var firstOneCharUpper = txtSiteName.Text.Substring(0, 1).ToUpper();
@@ -59,165 +61,76 @@ namespace MyProfessional
                 var lastTwoCharUpper = txtSiteName.Text.Substring(Math.Max(0, txtSiteName.Text.Length - 2)).ToUpper();
                 lastTwoCharUpper = lastTwoCharUpper.Substring(1, 1);
 
-                #region Shape
 
-                var firstShape = _randomString(ShapeSample, 1);
+                // ( ¶ ) ∆∆-€€¶¶€€-∆∆!
+                var firstShape = RandomString(shapeSample, 1);
                 txtPassword.Text = firstShape;
-                ShapeSample = ShapeSample.Replace(firstShape, "");
+                shapeSample = shapeSample.Replace(firstShape, "");
 
-                #endregion
 
-                #region FirstTwoChar
+                // ¶ ( ∆∆- ) €€¶¶€€-∆∆!
+                txtPassword.Text += RandomString(firstOneCharLower + firstOneCharUpper, 1);
+                txtPassword.Text += RandomString(firstTwoCharLower + firstTwoCharUpper, 1) + "-";
 
-                txtPassword.Text += _randomString(firstOneCharLower + firstOneCharUpper, 1);
-                txtPassword.Text += _randomString(firstTwoCharLower + firstTwoCharUpper, 1) + "-";
 
-                #endregion
-
-                #region Number
-
+                // ¶∆∆- ( €€ ) ¶¶€€-∆∆!
                 txtPassword.Text += txtSiteName.Text.Length * txtSiteName.Text.Length;
 
-                //txtPassword.Text += _randomString("0123456789", 4);
 
-                //var number = _randomString("1234567890", 1);
-                //txtPassword.Text += number;
-                //NumberSample = NumberSample.Replace(number, "");
-
-                //for (var i = 0; i <= 2; i++)
-                //{
-                //    number = _randomString(NumberSample, 1);
-                //    txtPassword.Text += number;
-                //    NumberSample = NumberSample.Replace(number, "");
-                //}
-
-                #endregion
-
-                #region Shape
-
-                var shape2 = _randomString(ShapeSample, 1);
+                // ¶∆∆-€€ ( ¶¶ ) €€-∆∆!
+                var shape2 = RandomString(shapeSample, 1);
                 txtPassword.Text += shape2;
-                ShapeSample = ShapeSample.Replace(shape2, "");
+                shapeSample = shapeSample.Replace(shape2, "");
 
-                var shape3 = _randomString(ShapeSample, 1);
+                var shape3 = RandomString(shapeSample, 1);
                 txtPassword.Text += shape3;
-                ShapeSample = ShapeSample.Replace(shape3, "");
+                shapeSample = shapeSample.Replace(shape3, "");
+                var wordSample1 = "abcdefghijklmnopqrstuvwxyz";
 
-                //var word = _randomString(WordSample, 1);
-                //WordSample = WordSample.Replace(word, "");
 
-                //var word2 = _randomString(WordSample, 1);
-
-                //var shape = _randomString(ShapeSample, 1);
-                //ShapeSample = ShapeSample.Replace(shape, "");
-
-                //var shape2 = _randomString(ShapeSample, 1);
-                //ShapeSample = ShapeSample.Replace(shape2, "");
-
-                //var allThings = word + word2 + shape + shape2;
-                //var all = _randomString(allThings, 1);
-                //txtPassword.Text += all;
-                //allThings = allThings.Replace(all, "");
-
-                //for (var i = 0; i <= 2; i++)
-                //{
-                //    all = _randomString(allThings, 1);
-                //    txtPassword.Text += all;
-                //    allThings = allThings.Replace(all, "");
-                //}
-
-                //var shape2 = _randomString(ShapeSample, 1);
-                //txtPassword.Text += shape2;
-                //ShapeSample = ShapeSample.Replace(shape2, "");
-
-                //var shape3 = _randomString(ShapeSample, 1);
-                //txtPassword.Text += shape3;
-                //ShapeSample = ShapeSample.Replace(shape3, "");
-
-                #endregion
-
-                #region Number
-
-                var WordSample1 = "abcdefghijklmnopqrstuvwxyz";
-
+                // ¶∆∆-€€¶¶ ( €€- ) ∆∆!
                 for (int i = 1; i <= 26; i++)
                 {
-                    var WordSample2 = WordSample1.Substring(0, 1);
+                    var wordSample2 = wordSample1.Substring(0, 1);
 
-                    if (firstOneCharLower == WordSample2)
+                    if (firstOneCharLower == wordSample2)
                     {
                         txtPassword.Text += i.ToString();
                         break;
                     }
-                    else
-                    {
-                        WordSample1 = WordSample1.Replace(WordSample2, "");
-                    }
+                    wordSample1 = wordSample1.Replace(wordSample2, "");
                 }
 
-                WordSample1 = "abcdefghijklmnopqrstuvwxyz";
+                wordSample1 = "abcdefghijklmnopqrstuvwxyz";
 
                 for (int i = 1; i <= 26; i++)
                 {
-                    var WordSample2 = WordSample1.Substring(0, 1);
+                    var wordSample2 = wordSample1.Substring(0, 1);
 
-                    if (lastOneCharLower == WordSample2)
+                    if (lastOneCharLower == wordSample2)
                     {
-                        txtPassword.Text += i.ToString() + "-";
+                        txtPassword.Text += i + "-";
                         break;
                     }
-                    else
-                    {
-                        WordSample1 = WordSample1.Replace(WordSample2, "");
-                    }
+                    wordSample1 = wordSample1.Replace(wordSample2, "");
                 }
 
-                //txtPassword.Text += txtSiteName.Text.Length * txtSiteName.Text.Length;
 
-                //txtPassword.Text += _randomString("0123456789", 4);
-
-                //var number2 = _randomString(NumberSample, 1);
-                //txtPassword.Text += number2;
-                //NumberSample = NumberSample.Replace(number2, "");
-
-                //for (var i = 0; i <= 2; i++)
-                //{
-                //    number2 = _randomString(NumberSample, 1);
-                //    txtPassword.Text += number2;
-                //    NumberSample = NumberSample.Replace(number2, "");
-                //}
-
-                #endregion
-
-                #region LastTwoChar
-
-                txtPassword.Text += _randomString(lastOneCharLower + lastOneCharUpper, 1);
-                txtPassword.Text += _randomString(lastTwoCharLower + lastTwoCharUpper, 1) + "!";
-
-                #endregion
-
-                #region Shape
-
-                //var lastShape = _randomString(ShapeSample, 1);
-                //txtPassword.Text += lastShape;
-
-                #endregion
+                // ¶∆∆-€€¶¶€€- ( ∆∆! )
+                txtPassword.Text += RandomString(lastOneCharLower + lastOneCharUpper, 1);
+                txtPassword.Text += RandomString(lastTwoCharLower + lastTwoCharUpper, 1) + "!";
 
             }
             catch (Exception) { txtPassword.Text = null; }
         }
 
-        private void _makeRandomPassword()
+        private void MakeRandomPassword()
         {
-            txtPassword.Text = _randomString("=#%@!0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", 18);
+            if (txtSiteName.Text.Trim().Length >= 1) txtPassword.Text = RandomString("=#%@!0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", 18);
+            else txtPassword.Text = null;
         }
 
-        private void _makeFixedPassword()
-        {
-            txtPassword.Text = "AR-ash194376!";
-        }
-
-        private string _randomString(string chars, int length)
+        private string RandomString(string chars, int length)
         {
             var sb = new StringBuilder();
             for (var i = 0; i < length; i++)
@@ -229,19 +142,17 @@ namespace MyProfessional
             return sb.ToString();
         }
 
-        private void _loadDGV()
+        private void LoadDgv()
         {
-            dgvPassword.DataSource = bllPassword.ReadAll();
-            if (dgvPassword.CurrentRow != null)
-            {
-                dgvPassword.ContextMenuStrip = contextMenuStrip1;
-            }
+            dgvPassword.DataSource = BllPassword.ReadAll();
+            if (dgvPassword.CurrentRow != null) dgvPassword.ContextMenuStrip = contextMenuStrip1;
         }
 
-        private void ucPassword_Load(object sender, EventArgs e)
+        private void UcPassword_Load(object sender, EventArgs e)
         {
+            btnChangePassword.ForeColor = Color.FromArgb(0, 80, 180);
             dgvPassword.AutoGenerateColumns = false;
-            _loadDGV();
+            LoadDgv();
         }
 
         private void btnRegist_Click(object sender, EventArgs e)
@@ -250,34 +161,34 @@ namespace MyProfessional
             {
                 if (txtPassword.Text.Trim().Length == 0)
                 {
-                    CustomMessageBox.ShowMessageBox("!فیلد پسوورد نباید خالی باشه", CustomMessageBox.Conditions.Error);
+                    _ = CustomMessageBox.ShowMessageBox("!فیلد پسوورد نباید خالی باشه", CustomMessageBox.Status.Error);
                 }
                 else
                 {
                     var password = new Password(txtSiteName.Text, txtUsername.Text,
                         txtEmail.Text, txtPassword.Text);
-                    bllPassword.Create(password);
-                    CustomMessageBox.ShowMessageBox("!پسوورد جدید با موفقیت ثبت شد",
-                        CustomMessageBox.Conditions.Information);
-                    _clearControllers();
-                    _loadDGV();
+                    BllPassword.Create(password);
+                    _ = CustomMessageBox.ShowMessageBox("!پسوورد جدید با موفقیت ثبت شد",
+                        CustomMessageBox.Status.Information);
+                    ClearControllers();
+                    if (securityStatusPassword == "Off") LoadDgv();
                 }
             }
             else
             {
                 if (txtPassword.Text.Trim().Length == 0)
                 {
-                    CustomMessageBox.ShowMessageBox("!فیلد پسوورد نباید خالی باشه", CustomMessageBox.Conditions.Error);
+                    _ = CustomMessageBox.ShowMessageBox("!فیلد پسوورد نباید خالی باشه", CustomMessageBox.Status.Error);
                 }
                 else
                 {
                     var password = new Password(txtSiteName.Text, txtUsername.Text,
                         txtEmail.Text, txtPassword.Text);
-                    bllPassword.Edit(password, _selectedId);
-                    CustomMessageBox.ShowMessageBox($@"!سطر {_selectedRowNumber} با موفقیت ویرایش شد",
-                        CustomMessageBox.Conditions.Information);
-                    _clearControllers();
-                    _loadDGV();
+                    BllPassword.Edit(password, _selectedId);
+                    _ = CustomMessageBox.ShowMessageBox($"!سطر {_selectedRowNumber} با موفقیت ویرایش شد",
+                        CustomMessageBox.Status.Information);
+                    ClearControllers();
+                    if (securityStatusPassword == "Off") LoadDgv();
                     btnRegist.Text = "ذخیره سازی";
                 }
             }
@@ -291,41 +202,35 @@ namespace MyProfessional
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            if (rdbSpecialAlgorithm.Checked)
-            {
-                _makeSpecialPassword();
-            }
-            else if (rdbRandomAlgorithm.Checked)
-            {
-                _makeRandomPassword();
-            }
-            else if (rdbFixedAlgorithm.Checked)
-            {
-                _makeFixedPassword();
-            }
+            if (rdbSpecialAlgorithm.Checked) MakeSpecialPassword();
+            else if (rdbRandomAlgorithm.Checked) MakeRandomPassword();
         }
 
         private void txtSiteName_TextChanged(object sender, EventArgs e)
         {
-            if (rdbSpecialAlgorithm.Checked)
-            {
-                _makeSpecialPassword();
-            }
+            if (rdbSpecialAlgorithm.Checked) MakeSpecialPassword();
+            else if (rdbRandomAlgorithm.Checked) MakeRandomPassword();
         }
 
         private void rdbSpecialAlgorithm_CheckedChanged(object sender, EventArgs e)
         {
-            _makeSpecialPassword();
+            MakeSpecialPassword();
+            btnChangePassword.Enabled = true;
+            btnChangePassword.ForeColor = Color.FromArgb(0, 126, 249);
         }
 
         private void rdbRandomAlgorithm_CheckedChanged(object sender, EventArgs e)
         {
-            _makeRandomPassword();
+            MakeRandomPassword();
+            btnChangePassword.Enabled = true;
+            btnChangePassword.ForeColor = Color.FromArgb(0, 126, 249);
         }
 
-        private void rdbFixedAlgorithm_CheckedChanged(object sender, EventArgs e)
+        private void rdbNoneAlgorithm_CheckedChanged(object sender, EventArgs e)
         {
-            _makeFixedPassword();
+            btnChangePassword.ForeColor = Color.FromArgb(0, 80, 180);
+            txtPassword.Text = null;
+            btnChangePassword.Enabled = false;
         }
 
         private void dgvPassword_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -341,7 +246,7 @@ namespace MyProfessional
         {
             try
             {
-                var password = bllPassword.GetById(_selectedId);
+                var password = BllPassword.FindBy(_selectedId);
                 Clipboard.SetText(password.TextPassword);
             }
             catch (Exception) { /*ignore*/ }
@@ -350,45 +255,39 @@ namespace MyProfessional
         #region ContextMenueStrip
         private void ویرایشسطرToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rdbSpecialAlgorithm.Checked = false;
-            rdbRandomAlgorithm.Checked = false;
-            rdbFixedAlgorithm.Checked = false;
-            var password = bllPassword.GetById(_selectedId);
+            rdbNoneAlgorithm.Checked = true;
+            var password = BllPassword.FindBy(_selectedId);
             txtSiteName.Text = password.SiteName;
             txtUsername.Text = password.Username;
             txtEmail.Text = password.Email;
             txtPassword.Text = password.TextPassword;
-            btnRegist.Text = "ویرایش سطر";
+            btnRegist.Text = "ذخیره سازی ویرایش";
             _selectedRowNumber = dgvPassword.CurrentRow.Index + 1;
         }
 
         private void حذفسطرToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _selectedRowNumber = dgvPassword.CurrentRow.Index + 1;
-            if (CustomMessageBox.ShowMessageBox($@"آیا سطر {_selectedRowNumber} حذف بشه؟",
-                CustomMessageBox.Conditions.Warning, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (CustomMessageBox.ShowMessageBox($"آیا سطر {_selectedRowNumber} حذف شود؟",
+                CustomMessageBox.Status.Warning, MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                bllPassword.Delete(_selectedId);
-                _loadDGV();
-                CustomMessageBox.ShowMessageBox($@"!سطر {_selectedRowNumber} با موفقیت حذف شد",
-                    CustomMessageBox.Conditions.Information);
+                BllPassword.Delete(_selectedId);
+                LoadDgv();
+                _ = CustomMessageBox.ShowMessageBox($"!سطر {_selectedRowNumber} با موفقیت حذف شد",
+                    CustomMessageBox.Status.Information);
             }
-
-            if (dgvPassword.CurrentRow == null)
-            {
-                dgvPassword.ContextMenuStrip = null;
-            }
+            if (dgvPassword.CurrentRow == null) dgvPassword.ContextMenuStrip = null;
         }
 
         private void کپیکردنسطرهاToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var passwordList = bllPassword.CopyRows();
+            var passwordList = BllPassword.CopyRows();
             var result = new StringBuilder();
             foreach (var password in passwordList)
             {
                 result.AppendLine(password);
             }
-            Clipboard.SetText("(شکل رندوم)(2 حرف اول)-(تعداد حروف ضربدر خودش)(2 شکل رندوم)(عدد حرف اول در انگلیسی)(عدد حرف دوم در انگلیسی)-(2 حرف آخر)!\r\n \r\n" + result.ToString());
+            Clipboard.SetText($"(شکل رندوم)(2 حرف اول)-(تعداد حروف ضربدر خودش)(2 شکل رندوم)(عدد حرف اول در انگلیسی)(عدد حرف دوم در انگلیسی)-(2 حرف آخر)!\r\n \r\n{result}");
         }
         #endregion
     }

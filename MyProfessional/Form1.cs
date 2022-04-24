@@ -8,10 +8,9 @@ namespace MyProfessional
     public partial class Form1 : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
+        private static extern void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         [DllImport("user32.dll")]
         public static extern bool EnableWindow(IntPtr hwnd, bool bEnable);
@@ -21,31 +20,55 @@ namespace MyProfessional
             InitializeComponent();
         }
 
-        private readonly ucHome _ucHome = new ucHome();
-        private readonly ucPassword _ucPassword = new ucPassword();
-        private readonly ucMillion _ucMillion = new ucMillion();
-        private readonly ucTimer _ucTimer = new ucTimer();
-        private readonly ucSettings _ucSettings = new ucSettings();
-        private string _note;
+        private readonly UcHome _ucHome = new UcHome();
+        private readonly UcPassword _ucPassword = new UcPassword();
+        private readonly UcMillion _ucMillion = new UcMillion();
+        private readonly UcTimer _ucTimer = new UcTimer();
+        private readonly UcSettings _ucSettings = new UcSettings();
+        public string securityStatus = "Off";
 
-        private void _moveForm()
+        private void MoveForm()
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-        private void _buttonsColor()
+        private void LoadButtons(UserControl us)
         {
             foreach (var item in panel1.Controls)
             {
                 if (item is Button)
                 {
                     var button = item as Button;
-                    if (button.BackColor == Color.FromArgb(45, 55, 90))
-                    {
-                        button.BackColor = Color.Transparent;
-                    }
+                    if (button.BackColor == Color.FromArgb(45, 55, 90)) button.BackColor = Color.Transparent;
                 }
+            }
+            panel3.Controls.Clear();
+            panel3.Controls.Add(us);
+            if (us == _ucHome)
+            {
+                panel4.Location = new Point(195, 74);
+                btnHome.BackColor = Color.FromArgb(45, 55, 90);
+            }
+            else if (us == _ucPassword)
+            {
+                panel4.Location = new Point(195, 139);
+                btnPassword.BackColor = Color.FromArgb(45, 55, 90);
+            }
+            else if (us == _ucMillion)
+            {
+                panel4.Location = new Point(195, 204);
+                btnMillion.BackColor = Color.FromArgb(45, 55, 90);
+            }
+            else if (us == _ucTimer)
+            {
+                panel4.Location = new Point(195, 269);
+                btnTimer.BackColor = Color.FromArgb(45, 55, 90);
+            }
+            else if (us == _ucSettings)
+            {
+                panel4.Location = new Point(195, 485);
+                btnSettings.BackColor = Color.FromArgb(45, 55, 90);
             }
         }
 
@@ -58,52 +81,32 @@ namespace MyProfessional
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(_ucHome);
-            panel4.Location = new Point(195, 74);
-            _buttonsColor();
-            btnHome.BackColor = Color.FromArgb(45, 55, 90);
+            LoadButtons(_ucHome);
         }
 
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(_ucPassword);
-            panel4.Location = new Point(195, 139);
-            _buttonsColor();
-            btnPassword.BackColor = Color.FromArgb(45, 55, 90);
+            LoadButtons(_ucPassword);
         }
 
         private void btnMillion_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(_ucMillion);
-            panel4.Location = new Point(195, 204);
-            _buttonsColor();
-            btnMillion.BackColor = Color.FromArgb(45, 55, 90);
+            LoadButtons(_ucMillion);
         }
 
         private void btnTimer_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(_ucTimer);
-            panel4.Location = new Point(195, 269);
-            _buttonsColor();
-            btnTimer.BackColor = Color.FromArgb(45, 55, 90);
+            LoadButtons(_ucTimer);
         }
 
-        private void btnBackup_Click(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(_ucSettings);
-            panel4.Location = new Point(195, 485);
-            _buttonsColor();
-            btnBackup.BackColor = Color.FromArgb(45, 55, 90);
+            LoadButtons(_ucSettings);
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -113,13 +116,15 @@ namespace MyProfessional
 
         private void btnSecurity_Click(object sender, EventArgs e)
         {
-            if (btnSecurity.Text == " ")
+            if (securityStatus == "Off")
             {
                 btnSecurity.Image = Properties.Resources.SecurityOn;
-                btnSecurity.Text = "  ";
+                securityStatus = "On";
+                _ucMillion.securityStatusMillion = securityStatus;
+                _ucPassword.securityStatusPassword = securityStatus;
 
-                _note = _ucHome.txtNote.Text;
-                _ucHome.txtNote.Text = null;
+                _ucHome.txtNote.Enabled = false;
+                _ucHome.txtNote.ForeColor = Color.FromArgb(240, 240, 240);
 
                 _ucPassword.dgvPassword.DataSource = null;
                 _ucMillion.dgvMillion.DataSource = null;
@@ -131,17 +136,20 @@ namespace MyProfessional
                 _ucMillion.ویرایشسطرToolStripMenuItem.Visible = false;
                 _ucMillion.حذفسطرToolStripMenuItem.Visible = false;
 
-                _ucMillion.lblDefaultMoney.Text = "مجموع درآمدها";
+                _ucMillion.lblDefaultMoney.Text = "مجموع ميليون!";
             }
             else
             {
                 btnSecurity.Image = Properties.Resources.SecurityOff;
-                btnSecurity.Text = " ";
+                securityStatus = "Off";
+                _ucMillion.securityStatusMillion = securityStatus;
+                _ucPassword.securityStatusPassword = securityStatus;
 
-                _ucHome.txtNote.Text = _note;
+                _ucHome.txtNote.Enabled = true;
+                _ucHome.txtNote.ForeColor = Color.Black;
 
-                _ucPassword.dgvPassword.DataSource = _ucPassword.bllPassword.ReadAll();
-                _ucMillion.dgvMillion.DataSource = _ucMillion.bllMillion.ReadAll();
+                _ucPassword.dgvPassword.DataSource = _ucPassword.BllPassword.ReadAll();
+                _ucMillion.dgvMillion.DataSource = _ucMillion.BllMillion.ReadAll();
 
                 _ucPassword.ویرایشسطرToolStripMenuItem.Visible = true;
                 _ucPassword.حذفسطرToolStripMenuItem.Visible = true;
@@ -150,7 +158,7 @@ namespace MyProfessional
                 _ucMillion.ویرایشسطرToolStripMenuItem.Visible = true;
                 _ucMillion.حذفسطرToolStripMenuItem.Visible = true;
 
-                _ucMillion.refreshMoney();
+                _ucMillion.RefreshMoney();
             }
         }
 
@@ -170,17 +178,18 @@ namespace MyProfessional
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            _moveForm();
+            MoveForm();
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-            _moveForm();
+            MoveForm();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             Opacity += .10;
+            if (Opacity == 100) timer1.Stop();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -191,14 +200,7 @@ namespace MyProfessional
 
             Properties.Settings.Default.DefaultMoney = _ucMillion.txtDefaultMoney.Text;
 
-            if (_ucHome.txtNote.Text == "")
-            {
-                Properties.Settings.Default.Note = _note;
-            }
-            else
-            {
-                Properties.Settings.Default.Note = _ucHome.txtNote.Text;
-            }
+            Properties.Settings.Default.Note = _ucHome.txtNote.Text;
 
             Properties.Settings.Default.Save();
         }

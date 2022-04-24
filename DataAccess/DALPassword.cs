@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BusinessEntity;
-using BusinessEntity.Dto;
 
 namespace DataAccess
 {
@@ -27,7 +26,7 @@ namespace DataAccess
 
         public void Delete(int id)
         {
-            Password password = GetById(id);
+            Password password = FindBy(id);
             _db.Passwords.Remove(password);
             _db.SaveChanges();
         }
@@ -37,7 +36,7 @@ namespace DataAccess
             return _db.Passwords.OrderBy(i => i.SiteName).ToList();
         }
 
-        public Password GetById(int id)
+        public Password FindBy(int id)
         {
             return _db.Passwords.FirstOrDefault(i => i.Id == id);
         }

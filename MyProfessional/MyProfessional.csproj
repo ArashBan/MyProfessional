@@ -262,12 +262,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLoading.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLoading.Designer.cs">
-      <DependentUpon>frmLoading.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -275,61 +269,58 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ucSettings.cs">
+    <Compile Include="UcSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucSettings.Designer.cs">
-      <DependentUpon>ucSettings.cs</DependentUpon>
+    <Compile Include="UcSettings.Designer.cs">
+      <DependentUpon>UcSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucHome.cs">
+    <Compile Include="UcHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucHome.Designer.cs">
-      <DependentUpon>ucHome.cs</DependentUpon>
+    <Compile Include="UcHome.Designer.cs">
+      <DependentUpon>UcHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucPassword.cs">
+    <Compile Include="UcPassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucPassword.Designer.cs">
-      <DependentUpon>ucPassword.cs</DependentUpon>
+    <Compile Include="UcPassword.Designer.cs">
+      <DependentUpon>UcPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucTimer.cs">
+    <Compile Include="UcTimer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucTimer.Designer.cs">
-      <DependentUpon>ucTimer.cs</DependentUpon>
+    <Compile Include="UcTimer.Designer.cs">
+      <DependentUpon>UcTimer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucMillion.cs">
+    <Compile Include="UcMillion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucMillion.Designer.cs">
-      <DependentUpon>ucMillion.cs</DependentUpon>
+    <Compile Include="UcMillion.Designer.cs">
+      <DependentUpon>UcMillion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.resx">
-      <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucSettings.resx">
-      <DependentUpon>ucSettings.cs</DependentUpon>
+    <EmbeddedResource Include="UcSettings.resx">
+      <DependentUpon>UcSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucHome.resx">
-      <DependentUpon>ucHome.cs</DependentUpon>
+    <EmbeddedResource Include="UcHome.resx">
+      <DependentUpon>UcHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucPassword.resx">
-      <DependentUpon>ucPassword.cs</DependentUpon>
+    <EmbeddedResource Include="UcPassword.resx">
+      <DependentUpon>UcPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucTimer.resx">
-      <DependentUpon>ucTimer.cs</DependentUpon>
+    <EmbeddedResource Include="UcTimer.resx">
+      <DependentUpon>UcTimer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucMillion.resx">
-      <DependentUpon>ucMillion.cs</DependentUpon>
+    <EmbeddedResource Include="UcMillion.resx">
+      <DependentUpon>UcMillion.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -372,29 +363,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <None Include="Resources\SecurityOn copy.png" />
-    <None Include="Resources\SecurityOff copy.png" />
+    <None Include="Resources\Backup.png" />
+    <None Include="Resources\Copy.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Edit.png" />
     <None Include="Resources\SecurityOn.png" />
     <None Include="Resources\SecurityOff.png" />
-    <None Include="Resources\1111.png" />
-    <None Include="Resources\13.png" />
-    <None Include="Resources\22.png" />
-    <None Include="Resources\111.png" />
-    <None Include="Resources\21.png" />
-    <None Include="Resources\12.png" />
-    <None Include="Resources\2.png" />
-    <None Include="Resources\11.png" />
     <None Include="Resources\Lock.png" />
     <None Include="Resources\UnLock.png" />
-    <None Include="Resources\Passwordd.png" />
-    <None Include="Resources\1.png" />
-    <None Include="Resources\WaterRain.png" />
-    <None Include="Resources\DropRain.png" />
-    <None Include="Resources\%28Rain%29.png" />
+    <None Include="Resources\Password.png" />
     <None Include="Resources\Settings.png" />
     <None Include="Resources\Timer.png" />
     <None Include="Resources\Million.png" />
-    <None Include="Resources\Password.png" />
     <None Include="Resources\Home.png" />
     <None Include="Resources\Exit.png" />
   </ItemGroup>

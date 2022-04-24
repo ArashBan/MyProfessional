@@ -4,96 +4,92 @@ using System.Windows.Forms;
 
 namespace MyProfessional
 {
-    public partial class ucTimer : UserControl
+    public partial class UcTimer : UserControl
     {
-        public ucTimer()
+        public UcTimer()
         {
             InitializeComponent();
         }
 
-        private int _minute;
-        private int _second;
+        private int _timerMinute;
+        private int _timerSecond;
+        private int _cronometerMinute;
+        private int _cronometerSecond;
+        private int _cronometerMiniSecond;
 
-        private void UCTimer_Load(object sender, EventArgs e)
+        private void UcTimer_Load(object sender, EventArgs e)
         {
-            btnPause.ForeColor = Color.FromArgb(0, 80, 180);
-            btnStop.ForeColor = Color.FromArgb(0, 80, 180);
+            btnTimerPause.ForeColor = Color.FromArgb(0, 80, 180);
+            btnTimerStop.ForeColor = Color.FromArgb(0, 80, 180);
+
+            btnCronometerPause.ForeColor = Color.FromArgb(0, 80, 180);
+            btnCronometerStop.ForeColor = Color.FromArgb(0, 80, 180);
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnTimerStart_Click(object sender, EventArgs e)
         {
-            if (btnStart.Text == "شروع")
+            timer1.Start();
+            timer2.Start();
+            if (btnTimerStart.Text == "شروع")
             {
-                btnStart.Enabled = false;
-                btnPause.Enabled = true;
-                btnStop.Enabled = true;
+                btnTimerStart.Enabled = false;
+                btnTimerPause.Enabled = true;
+                btnTimerStop.Enabled = true;
 
-                btnStart.ForeColor = Color.FromArgb(0, 80, 180);
-                btnPause.ForeColor = Color.FromArgb(0, 126, 249);
-                btnStop.ForeColor = Color.FromArgb(0, 126, 249);
+                btnTimerStart.ForeColor = Color.FromArgb(0, 80, 180);
+                btnTimerPause.ForeColor = Color.FromArgb(0, 126, 249);
+                btnTimerStop.ForeColor = Color.FromArgb(0, 126, 249);
 
-                _minute = (int)nudTimer.Value;
-                if (_minute <= 9)
-                {
-                    lblMinute.Text = "0";
-                    lblMinute.Text += _minute.ToString();
-                }
-                else
-                {
-                    lblMinute.Text = _minute.ToString();
-                }
+                _timerMinute = (int)nudTimer.Value;
+                lblTimerMinute.Text = _timerMinute.ToString("00");
+
                 timer1.Interval = (int)nudTimer.Value * 1000 * 60;
-                lblSecond.Text = "00";
-                timer1.Start();
-                timer2.Start();
-                btnStart.Text = "ادامه";
+                lblTimerSecond.Text = "00";
+                btnTimerStart.Text = "ادامه";
             }
-            else if (btnStart.Text == "ادامه")
+            else if (btnTimerStart.Text == "ادامه")
             {
-                timer1.Start();
-                timer2.Start();
+                btnTimerStart.Enabled = false;
+                btnTimerPause.Enabled = true;
 
-                btnStart.Enabled = false;
-                btnPause.Enabled = true;
-
-                btnStart.ForeColor = Color.FromArgb(0, 80, 180);
-                btnPause.ForeColor = Color.FromArgb(0, 126, 249);
+                btnTimerStart.ForeColor = Color.FromArgb(0, 80, 180);
+                btnTimerPause.ForeColor = Color.FromArgb(0, 126, 249);
             }
         }
 
-        private void btnPause_Click(object sender, EventArgs e)
+        private void btnTimerPause_Click(object sender, EventArgs e)
         {
             timer1.Stop();
             timer2.Stop();
 
-            btnStart.Enabled = true;
-            btnPause.Enabled = false;
+            btnTimerStart.Enabled = true;
+            btnTimerPause.Enabled = false;
 
-            btnStart.ForeColor = Color.FromArgb(0, 126, 249);
-            btnPause.ForeColor = Color.FromArgb(0, 80, 180);
+            btnTimerStart.ForeColor = Color.FromArgb(0, 126, 249);
+            btnTimerPause.ForeColor = Color.FromArgb(0, 80, 180);
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        private void btnTimerStop_Click(object sender, EventArgs e)
         {
             timer1.Stop();
             timer2.Stop();
 
-            lblMinute.Text = "00";
-            lblSecond.Text = "00";
-            _second = 0;
+            lblTimerMinute.Text = "00";
+            lblTimerSecond.Text = "00";
+            _timerSecond = 0;
 
-            btnStart.Enabled = true;
-            btnPause.Enabled = false;
-            btnStop.Enabled = false;
-            btnStart.ForeColor = Color.FromArgb(0, 126, 249);
-            btnPause.ForeColor = Color.FromArgb(0, 80, 180);
-            btnStop.ForeColor = Color.FromArgb(0, 80, 180);
-            btnStart.Text = "شروع";
+            btnTimerStart.Enabled = true;
+            btnTimerPause.Enabled = false;
+            btnTimerStop.Enabled = false;
+            btnTimerStart.ForeColor = Color.FromArgb(0, 126, 249);
+            btnTimerPause.ForeColor = Color.FromArgb(0, 80, 180);
+            btnTimerStop.ForeColor = Color.FromArgb(0, 80, 180);
+            btnTimerStart.Text = "شروع";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            notifyIcon1.BalloonTipTitle = nudTimer.Text + " دقیقه تمام شده است!";
+            notifyIcon1.BalloonTipTitle = $"تایمر {nudTimer.Text} دقیقه تمام شده است!";
             notifyIcon1.BalloonTipText = txtTitle.Text;
             notifyIcon1.Icon = SystemIcons.Information;
 
@@ -104,63 +100,121 @@ namespace MyProfessional
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if (_minute <= 10)
-            {
-                if (_second <= 59 && _second >= 11)
-                {
-                    _second -= 1;
-                    lblSecond.Text = _second.ToString();
-                }
-                else
-                {
-                    lblSecond.Text = "0";
-                    _second -= 1;
-                    lblSecond.Text += _second.ToString();
-                }
+            _timerSecond--;
+            lblTimerSecond.Text = _timerSecond.ToString("00");
 
-                if (_second < 0)
-                {
-                    lblMinute.Text = "0";
-                    _minute -= 1;
-                    lblMinute.Text += _minute.ToString();
-                    _second = 59;
-                    lblSecond.Text = _second.ToString();
-                }
+            if (_timerSecond < 0)
+            {
+                _timerSecond = 59;
+                lblTimerSecond.Text = _timerSecond.ToString("00");
+                _timerMinute--;
+                lblTimerMinute.Text = _timerMinute.ToString("00");
             }
 
-            else
+            if (_timerMinute == 0 && _timerSecond == 0)
             {
-                if (_second <= 59 && _second >= 11)
-                {
-                    _second -= 1;
-                    lblSecond.Text = _second.ToString();
-                }
-                else
-                {
-                    lblSecond.Text = "0";
-                    _second -= 1;
-                    lblSecond.Text += _second.ToString();
-                }
-
-                if (_second < 0)
-                {
-                    _minute -= 1;
-                    lblMinute.Text = _minute.ToString();
-                    _second = 59;
-                    lblSecond.Text = _second.ToString();
-                }
-            }
-
-            if (_minute == 0 && _second == 0)
-            {
-                lblMinute.Text = "00";
-                lblSecond.Text = "00";
-                _second = 0;
-                btnPause.Enabled = false;
-                btnPause.ForeColor = Color.FromArgb(0, 80, 180);
-                timer1_Tick(this, new EventArgs());
+                lblTimerMinute.Text = "00";
+                lblTimerSecond.Text = "00";
+                _timerSecond = 0;
+                btnTimerPause.Enabled = false;
+                btnTimerPause.ForeColor = Color.FromArgb(0, 80, 180);
+                timer1.Start();
                 timer2.Stop();
             }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            _cronometerMiniSecond++;
+            lblCronometerMiniSecond.Text = _cronometerMiniSecond.ToString("00");
+
+            if (_cronometerMiniSecond > 59)
+            {
+                _cronometerSecond++;
+                lblCronometerSecond.Text = _cronometerSecond.ToString("00");
+                _cronometerMiniSecond = 0;
+                lblCronometerMiniSecond.Text = _cronometerMiniSecond.ToString("00");
+            }
+
+            if (_cronometerSecond > 59)
+            {
+                _cronometerMinute++;
+                lblCronometerMinute.Text = _cronometerMinute.ToString("00");
+                _cronometerSecond = 0;
+                lblCronometerSecond.Text = _cronometerSecond.ToString("00");
+            }
+        }
+
+        private void btnCronometerStart_Click(object sender, EventArgs e)
+        {
+            timer3.Start();
+            if (btnCronometerStart.Text == "شروع")
+            {
+                btnCronometerStart.Enabled = false;
+                btnCronometerPause.Enabled = true;
+                btnCronometerStop.Enabled = true;
+                btnCronometerMark.Enabled = true;
+
+                btnCronometerStart.ForeColor = Color.FromArgb(0, 80, 180);
+                btnCronometerPause.ForeColor = Color.FromArgb(0, 126, 249);
+                btnCronometerStop.ForeColor = Color.FromArgb(0, 126, 249);
+                btnCronometerMark.ForeColor = Color.FromArgb(0, 126, 249);
+
+                btnCronometerStart.Text = "ادامه";
+                btnCronometerMark.Text = "مارک";
+            }
+            else if (btnCronometerStart.Text == "ادامه")
+            {
+                btnCronometerStart.Enabled = false;
+                btnCronometerPause.Enabled = true;
+
+                btnCronometerStart.ForeColor = Color.FromArgb(0, 80, 180);
+                btnCronometerPause.ForeColor = Color.FromArgb(0, 126, 249);
+
+                btnCronometerMark.Text = "مارک";
+            }
+        }
+
+        private void btnCronometerPause_Click(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            btnCronometerMark.Text = "حذف مارک ها";
+
+            btnCronometerStart.Enabled = true;
+            btnCronometerPause.Enabled = false;
+
+            btnCronometerStart.ForeColor = Color.FromArgb(0, 126, 249);
+            btnCronometerPause.ForeColor = Color.FromArgb(0, 80, 180);
+        }
+
+        private void btnCronometerStop_Click(object sender, EventArgs e)
+        {
+            timer3.Stop();
+
+            lblCronometerMinute.Text = "00";
+            lblCronometerSecond.Text = "00";
+            lblCronometerMiniSecond.Text = "00";
+            _cronometerMiniSecond = 0;
+            _cronometerSecond = 0;
+            _cronometerMinute = 0;
+
+            btnCronometerStart.Enabled = true;
+            btnCronometerPause.Enabled = false;
+            btnCronometerStop.Enabled = false;
+
+            btnCronometerStart.ForeColor = Color.FromArgb(0, 126, 249);
+            btnCronometerPause.ForeColor = Color.FromArgb(0, 80, 180);
+            btnCronometerStop.ForeColor = Color.FromArgb(0, 80, 180);
+            btnCronometerMark.ForeColor = Color.FromArgb(0, 126, 249);
+
+            btnCronometerStart.Text = "شروع";
+            btnCronometerMark.Text = "حذف مارک ها";
+        }
+
+        private void btnCronometerMark_Click(object sender, EventArgs e)
+        {
+            if (btnCronometerMark.Text == "حذف مارک ها") listBox1.Items.Clear();
+            else listBox1.Items.Add($"+ {lblCronometerMinute.Text}:{lblCronometerSecond.Text}:{lblCronometerMiniSecond.Text}");
         }
     }
 }
