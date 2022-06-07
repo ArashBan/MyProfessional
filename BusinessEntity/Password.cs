@@ -7,7 +7,7 @@
         public string Username { get; set; }
         public string Email { get; set; }
         public string TextPassword { get; set; }
-        //public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; }
 
         public Password(string sitename, string username, string email, string textpassword)
         {

@@ -117,46 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblUpdate.Text" xml:space="preserve">
-    <value>نسخه 1.6 :
-- افزودن قابلیت قفل برنامه
-- بهبود عملکرد حالت امنیتی
-- افزودن قابلیت کرنومتر به بخش تایمر
-- تغییرات و بهبود عملکرد بخش تایمر
-- برخی تغییرات موثر دیگر
-
-نسخه 1.5 :
-- افزودن تاریخ روز و دسترسی سریع
-   به بخش خانه
-- افزودن قابلیت حالت امنیتی
-- افزودن کپی تمام سطرهای پسوورد
-- بهبود و پیشرفت عملکرد بکاپ گیری
-- تغییر بخش بکاپ گیری به تنظیمات
-- تغییرات برای یادداشت و دیگر بخش ها
-- بهبود اساسی UI و UX
-
-نسخه 1.4 :
-- حذف بخش پشتیبانی
-- افزودن الگوریتم های جدید، یادداشت،
-   قابلیت پنهان کردن، و...
-- تغییرات برای بخش تایمر
-- برخی تغییرات عملکردی
-
-نسخه 1.3 :
-- طراحی بخش پشتیبانی
-- تغییرات کامل و قابلیت های جدید
-   برای بخش تایمر
-- 3 رقم جداشدن ارقام در بخش میلیون
-- اعمال ساختار سازی های گسترده
-
-نسخه 1.2 :
-- طراحی بخش بک آپ گیری
-- اضافه شدن قابلیت ویرایش و حذف
-- اعمال ساختار سازی های موثر
-
-نسخه 1.1 :
-- طراحی بخش خانه
-- برخی تغییرات ظاهری
-- رفع باگ های جزئی</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAO1ZSW/jNhS+F+h/EHRqgYyZ5dIG8gwydlIEHSfByDNAj7T0bBOlKJWkUvu3zaE/qX+hj9qoxYtsJ0FRFL5YT3zfW/hW++9vf3kfVhF3nkEqFouhezE4dx0QQRwysRi6qZ6/+8n98P7777zbMFo5X8tzV+Yccgo1dJdaJ9eEqGAJEVWDiAUyVvFcD4I4IjSMyeX5+c/k4oIAQriI5Tje51RoFkH2gI+jWASQ6JTySRwCVwUd3/gZqvNAI1AJDWDojqmmN0EASrnODWcUNfCBz12HChFrqlG/6y8KfC1jsfATJFA+XSeA5+aUKyj0vrbH+5pwfmlMIJaxhApSpePoQMCLq8InpM1+lGfdymfotVv0rl4bqzPPDd0J4zxDbsu6HnFpzg3dj6liAr2a8w4KjjOnST+rYgBDxXzOnFHKdSphKCDVkvIz5ymdcRb8Cutp/DuIoUg5r2uH+uG7BgFJTzJOQOr1Z5gXOt+HrkOafKTNWLHVeHJz7oW+unSdBxROZxyqy6+Z7utYwi8gQFIN4RPVGqQwGJCZ2pHekjVlmkMpDsMNM8Z1JnT1CcRCL9HndOU6d2wFYUkpVPgiGCYYMmmZwj4pk1jAep9RuyHGdP0Waurlq0v5Dah8YSEescmyM4WeqFJ/xjI8IIdKlv+TaKssn2kw3149dLAlSPEWgm4jyvirS5nCStuIfMOMwFatKcayrIqLpjNqIDtpgS4vMkMVcpom5YA+6GaTwr5uFcib+6DqX2Q3ROmSTRjWXZusreyyswfJh49ySCFbphRvQpMEHV+bWgqK4+cjy+idf3hPj3IMEqgNrb3StpKEaUgX0HqLolHTOyaVtvc0CqPOsertFveWYloX1a4/1uclg/luAyWf26rbbLFbx92hLREWkMwsqLSwc0yHMxsVKadyQy0bxTyNxLZ6uIu7aPF1gILUH6No4HWMgtQfI+vgdYSMcJAOpju3dDCk/hh5761D5JQugkda19gOE9KJk1aHasddr6i0uX9kWFYF4vC43M76OoFp22Ydw1L7I9m+WEey1P5IReOrwxSkAxKu0dYaedd488ZB12kS7SOV9KpZtJqCVxTo/fttp2LnR1wHXfXMQlOt/bXSEA3MgYH/Bx9xhvbaAxMq2ByUzidHF1fNy9aq/O9ZW4lSIe+3u7759MuMU/fOtwcuY42tUTxTGSyp/CGiqx/rUAdvhpmux++Fpypid7+TkOr73QFAh+9w/41Yai9PJ/m+vSCdBNZYgk5C2rTovFhotJeZ7rTca2PZtbDk1XvohrMY1c/VtItOz3Vm5zazSUJtDzpy2en2K4/Uf7X1xqDYwkKY33AFBKYRWNDyzL2Yx+W9onV1jcoj7ZoCmoZmNJOazWmg8bWZ0bL99ivlaRZjMwjvxWOqk1TfKAXRjDemYo/slp9tdE2dvcfEPKmXMAHVZGgCPIqPKeNhpfddN7W3QZh4LOoFaoX7PcIt1hXSA3aAfkCF+8aQgDDVZgpRwhFMPQqfPsMxumG9+AQLGqzLsWM7yP6LaLrdGzO6kDRSBYblN/9EEPNXxPt/AM0yoHC8GAAA</value>
+  </data>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

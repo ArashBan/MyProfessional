@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace MyProfessional
@@ -120,6 +121,11 @@ namespace MyProfessional
                 btnTimerPause.ForeColor = Color.FromArgb(0, 80, 180);
                 timer1.Start();
                 timer2.Stop();
+
+
+
+                Form1 _form1 = new Form1();
+                _form1.WindowState = FormWindowState.Normal;
             }
         }
 

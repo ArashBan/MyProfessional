@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnPassword = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSecurity = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnTimer = new System.Windows.Forms.Button();
             this.btnMillion = new System.Windows.Forms.Button();
+            this.btnPassword = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnLock = new System.Windows.Forms.Button();
+            this.btnSecurity = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,11 +52,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnTimer);
             this.panel1.Controls.Add(this.btnMillion);
             this.panel1.Controls.Add(this.btnPassword);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(725, 0);
@@ -68,10 +68,73 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.panel4.Location = new System.Drawing.Point(195, 74);
+            this.panel4.Location = new System.Drawing.Point(194, 74);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 65);
+            this.panel4.Size = new System.Drawing.Size(6, 70);
             this.panel4.TabIndex = 7;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSettings.Image = global::MyProfessional.Properties.Resources.Settings;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 480);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(0, 0, 28, 0);
+            this.btnSettings.Size = new System.Drawing.Size(200, 70);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Text = "تنظیمات    ";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnTimer
+            // 
+            this.btnTimer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTimer.FlatAppearance.BorderSize = 0;
+            this.btnTimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnTimer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimer.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnTimer.Image = global::MyProfessional.Properties.Resources.Timer;
+            this.btnTimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimer.Location = new System.Drawing.Point(0, 284);
+            this.btnTimer.Name = "btnTimer";
+            this.btnTimer.Padding = new System.Windows.Forms.Padding(19, 0, 29, 2);
+            this.btnTimer.Size = new System.Drawing.Size(200, 70);
+            this.btnTimer.TabIndex = 4;
+            this.btnTimer.Text = "تایمر    ";
+            this.btnTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimer.UseVisualStyleBackColor = true;
+            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
+            // 
+            // btnMillion
+            // 
+            this.btnMillion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMillion.FlatAppearance.BorderSize = 0;
+            this.btnMillion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnMillion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnMillion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMillion.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMillion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnMillion.Image = global::MyProfessional.Properties.Resources.Million;
+            this.btnMillion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMillion.Location = new System.Drawing.Point(0, 214);
+            this.btnMillion.Name = "btnMillion";
+            this.btnMillion.Padding = new System.Windows.Forms.Padding(10, 0, 28, 0);
+            this.btnMillion.Size = new System.Drawing.Size(200, 70);
+            this.btnMillion.TabIndex = 3;
+            this.btnMillion.Text = "درآمد     ";
+            this.btnMillion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMillion.UseVisualStyleBackColor = true;
+            this.btnMillion.Click += new System.EventHandler(this.btnMillion_Click);
             // 
             // btnPassword
             // 
@@ -80,19 +143,40 @@
             this.btnPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
             this.btnPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
             this.btnPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPassword.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassword.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnPassword.Image = global::MyProfessional.Properties.Resources.Password;
             this.btnPassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPassword.Location = new System.Drawing.Point(0, 139);
+            this.btnPassword.Location = new System.Drawing.Point(0, 144);
             this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Padding = new System.Windows.Forms.Padding(11, 0, 26, 0);
-            this.btnPassword.Size = new System.Drawing.Size(200, 65);
+            this.btnPassword.Padding = new System.Windows.Forms.Padding(13, 0, 26, 3);
+            this.btnPassword.Size = new System.Drawing.Size(200, 70);
             this.btnPassword.TabIndex = 2;
-            this.btnPassword.Text = "پسوورد     ";
+            this.btnPassword.Text = "پسوورد   ";
             this.btnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPassword.UseVisualStyleBackColor = true;
             this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnHome.Image = global::MyProfessional.Properties.Resources.Home;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 74);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(21, 0, 27, 0);
+            this.btnHome.Size = new System.Drawing.Size(200, 70);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "خانه    ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel2
             // 
@@ -106,6 +190,23 @@
             this.panel2.Size = new System.Drawing.Size(200, 74);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // btnLock
+            // 
+            this.btnLock.FlatAppearance.BorderSize = 2;
+            this.btnLock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnLock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLock.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
+            this.btnLock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnLock.Image = global::MyProfessional.Properties.Resources.UnLock;
+            this.btnLock.Location = new System.Drawing.Point(53, 13);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(35, 35);
+            this.btnLock.TabIndex = 0;
+            this.btnLock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLock.UseVisualStyleBackColor = true;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
             // 
             // btnSecurity
             // 
@@ -140,120 +241,6 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(725, 550);
-            this.panel3.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnTimer
-            // 
-            this.btnTimer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTimer.FlatAppearance.BorderSize = 0;
-            this.btnTimer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnTimer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnTimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimer.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTimer.Image = global::MyProfessional.Properties.Resources.Timer;
-            this.btnTimer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimer.Location = new System.Drawing.Point(0, 269);
-            this.btnTimer.Name = "btnTimer";
-            this.btnTimer.Padding = new System.Windows.Forms.Padding(16, 0, 29, 0);
-            this.btnTimer.Size = new System.Drawing.Size(200, 65);
-            this.btnTimer.TabIndex = 4;
-            this.btnTimer.Text = "تایمر      ";
-            this.btnTimer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimer.UseVisualStyleBackColor = true;
-            this.btnTimer.Click += new System.EventHandler(this.btnTimer_Click);
-            // 
-            // btnMillion
-            // 
-            this.btnMillion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMillion.FlatAppearance.BorderSize = 0;
-            this.btnMillion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnMillion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnMillion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMillion.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMillion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnMillion.Image = global::MyProfessional.Properties.Resources.Million;
-            this.btnMillion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMillion.Location = new System.Drawing.Point(0, 204);
-            this.btnMillion.Name = "btnMillion";
-            this.btnMillion.Padding = new System.Windows.Forms.Padding(8, 0, 28, 0);
-            this.btnMillion.Size = new System.Drawing.Size(200, 65);
-            this.btnMillion.TabIndex = 3;
-            this.btnMillion.Text = "میلیون      ";
-            this.btnMillion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMillion.UseVisualStyleBackColor = true;
-            this.btnMillion.Click += new System.EventHandler(this.btnMillion_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnHome.Image = global::MyProfessional.Properties.Resources.Home;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 74);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(18, 0, 27, 0);
-            this.btnHome.Size = new System.Drawing.Size(200, 65);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "خانه      ";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Sahel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Image = global::MyProfessional.Properties.Resources.Settings;
-            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 485);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(0, 0, 28, 0);
-            this.btnSettings.Size = new System.Drawing.Size(200, 65);
-            this.btnSettings.TabIndex = 6;
-            this.btnSettings.Text = "تنظیمات      ";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btnLock
-            // 
-            this.btnLock.FlatAppearance.BorderSize = 2;
-            this.btnLock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
-            this.btnLock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
-            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLock.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
-            this.btnLock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnLock.Image = global::MyProfessional.Properties.Resources.UnLock;
-            this.btnLock.Location = new System.Drawing.Point(53, 13);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(35, 35);
-            this.btnLock.TabIndex = 0;
-            this.btnLock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLock.UseVisualStyleBackColor = true;
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
-            // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -271,6 +258,19 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(725, 550);
+            this.panel3.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 20;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 

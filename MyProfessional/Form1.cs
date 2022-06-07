@@ -47,27 +47,27 @@ namespace MyProfessional
             panel3.Controls.Add(us);
             if (us == _ucHome)
             {
-                panel4.Location = new Point(195, 74);
+                panel4.Location = new Point(194, 74);
                 btnHome.BackColor = Color.FromArgb(45, 55, 90);
             }
             else if (us == _ucPassword)
             {
-                panel4.Location = new Point(195, 139);
+                panel4.Location = new Point(194, 144);
                 btnPassword.BackColor = Color.FromArgb(45, 55, 90);
             }
             else if (us == _ucMillion)
             {
-                panel4.Location = new Point(195, 204);
+                panel4.Location = new Point(194, 214);
                 btnMillion.BackColor = Color.FromArgb(45, 55, 90);
             }
             else if (us == _ucTimer)
             {
-                panel4.Location = new Point(195, 269);
+                panel4.Location = new Point(194, 284);
                 btnTimer.BackColor = Color.FromArgb(45, 55, 90);
             }
             else if (us == _ucSettings)
             {
-                panel4.Location = new Point(195, 485);
+                panel4.Location = new Point(194, 480);
                 btnSettings.BackColor = Color.FromArgb(45, 55, 90);
             }
         }
@@ -107,6 +107,7 @@ namespace MyProfessional
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+            //WindowState = FormWindowState.Normal;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -123,8 +124,8 @@ namespace MyProfessional
                 _ucMillion.securityStatusMillion = securityStatus;
                 _ucPassword.securityStatusPassword = securityStatus;
 
-                _ucHome.txtNote.Enabled = false;
-                _ucHome.txtNote.ForeColor = Color.FromArgb(240, 240, 240);
+                //_ucHome.txtNote.Enabled = false;
+                //_ucHome.txtNote.ForeColor = Color.FromArgb(240, 240, 240);
 
                 _ucPassword.dgvPassword.DataSource = null;
                 _ucMillion.dgvMillion.DataSource = null;
@@ -136,7 +137,7 @@ namespace MyProfessional
                 _ucMillion.ویرایشسطرToolStripMenuItem.Visible = false;
                 _ucMillion.حذفسطرToolStripMenuItem.Visible = false;
 
-                _ucMillion.lblDefaultMoney.Text = "مجموع ميليون!";
+                _ucMillion.lblDefaultMoney.Text = "مجموع درآمد!";
             }
             else
             {
@@ -145,8 +146,8 @@ namespace MyProfessional
                 _ucMillion.securityStatusMillion = securityStatus;
                 _ucPassword.securityStatusPassword = securityStatus;
 
-                _ucHome.txtNote.Enabled = true;
-                _ucHome.txtNote.ForeColor = Color.Black;
+                //_ucHome.txtNote.Enabled = true;
+                //_ucHome.txtNote.ForeColor = Color.Black;
 
                 _ucPassword.dgvPassword.DataSource = _ucPassword.BllPassword.ReadAll();
                 _ucMillion.dgvMillion.DataSource = _ucMillion.BllMillion.ReadAll();
@@ -200,9 +201,14 @@ namespace MyProfessional
 
             Properties.Settings.Default.DefaultMoney = _ucMillion.txtDefaultMoney.Text;
 
-            Properties.Settings.Default.Note = _ucHome.txtNote.Text;
+            //Properties.Settings.Default.Note = _ucHome.txtNote.Text;
 
             Properties.Settings.Default.Save();
+        }
+
+        private void btnQuickAccessName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

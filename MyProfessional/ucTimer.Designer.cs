@@ -84,9 +84,9 @@ namespace MyProfessional
             this.btnTimerStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnTimerStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimerStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTimerStart.Location = new System.Drawing.Point(349, 161);
+            this.btnTimerStart.Location = new System.Drawing.Point(350, 187);
             this.btnTimerStart.Name = "btnTimerStart";
-            this.btnTimerStart.Size = new System.Drawing.Size(128, 70);
+            this.btnTimerStart.Size = new System.Drawing.Size(128, 62);
             this.btnTimerStart.TabIndex = 3;
             this.btnTimerStart.Text = "شروع";
             this.btnTimerStart.UseVisualStyleBackColor = false;
@@ -100,9 +100,9 @@ namespace MyProfessional
             this.btnTimerStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnTimerStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimerStop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTimerStop.Location = new System.Drawing.Point(81, 161);
+            this.btnTimerStop.Location = new System.Drawing.Point(82, 187);
             this.btnTimerStop.Name = "btnTimerStop";
-            this.btnTimerStop.Size = new System.Drawing.Size(128, 70);
+            this.btnTimerStop.Size = new System.Drawing.Size(128, 62);
             this.btnTimerStop.TabIndex = 5;
             this.btnTimerStop.Text = "پایان";
             this.btnTimerStop.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@ namespace MyProfessional
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTimer.Location = new System.Drawing.Point(500, 25);
+            this.lblTimer.Location = new System.Drawing.Point(500, 140);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(116, 31);
             this.lblTimer.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace MyProfessional
             // 
             this.lblWarningTimer.AutoSize = true;
             this.lblWarningTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblWarningTimer.Location = new System.Drawing.Point(485, 70);
+            this.lblWarningTimer.Location = new System.Drawing.Point(218, 143);
             this.lblWarningTimer.Name = "lblWarningTimer";
             this.lblWarningTimer.Size = new System.Drawing.Size(153, 31);
             this.lblWarningTimer.TabIndex = 8;
@@ -132,7 +132,7 @@ namespace MyProfessional
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTitle.Location = new System.Drawing.Point(522, 115);
+            this.lblTitle.Location = new System.Drawing.Point(523, 95);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(62, 31);
             this.lblTitle.TabIndex = 9;
@@ -143,7 +143,7 @@ namespace MyProfessional
             this.lblTimerMinute.AutoSize = true;
             this.lblTimerMinute.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTimerMinute.Location = new System.Drawing.Point(167, 45);
+            this.lblTimerMinute.Location = new System.Drawing.Point(274, 31);
             this.lblTimerMinute.Name = "lblTimerMinute";
             this.lblTimerMinute.Size = new System.Drawing.Size(54, 47);
             this.lblTimerMinute.TabIndex = 14;
@@ -154,7 +154,7 @@ namespace MyProfessional
             this.lblTimerSecond.AutoSize = true;
             this.lblTimerSecond.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerSecond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTimerSecond.Location = new System.Drawing.Point(232, 45);
+            this.lblTimerSecond.Location = new System.Drawing.Point(339, 31);
             this.lblTimerSecond.Name = "lblTimerSecond";
             this.lblTimerSecond.Size = new System.Drawing.Size(54, 47);
             this.lblTimerSecond.TabIndex = 12;
@@ -171,7 +171,7 @@ namespace MyProfessional
             this.lblTimerPoints.BackColor = System.Drawing.Color.Transparent;
             this.lblTimerPoints.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimerPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblTimerPoints.Location = new System.Drawing.Point(212, 42);
+            this.lblTimerPoints.Location = new System.Drawing.Point(319, 28);
             this.lblTimerPoints.Name = "lblTimerPoints";
             this.lblTimerPoints.Size = new System.Drawing.Size(29, 47);
             this.lblTimerPoints.TabIndex = 13;
@@ -185,9 +185,9 @@ namespace MyProfessional
             this.btnTimerPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnTimerPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimerPause.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnTimerPause.Location = new System.Drawing.Point(215, 161);
+            this.btnTimerPause.Location = new System.Drawing.Point(216, 187);
             this.btnTimerPause.Name = "btnTimerPause";
-            this.btnTimerPause.Size = new System.Drawing.Size(128, 70);
+            this.btnTimerPause.Size = new System.Drawing.Size(128, 62);
             this.btnTimerPause.TabIndex = 4;
             this.btnTimerPause.Text = "مکث";
             this.btnTimerPause.UseVisualStyleBackColor = true;
@@ -202,16 +202,16 @@ namespace MyProfessional
             this.panel2.Controls.Add(this.lblTimerMinute);
             this.panel2.Controls.Add(this.lblTitle);
             this.panel2.Controls.Add(this.lblTimerSecond);
-            this.panel2.Controls.Add(this.lblWarningTimer);
             this.panel2.Controls.Add(this.btnTimerStart);
             this.panel2.Controls.Add(this.btnTimerPause);
             this.panel2.Controls.Add(this.btnTimerStop);
             this.panel2.Controls.Add(this.lblTimerPoints);
             this.panel2.Controls.Add(this.nudTimer);
             this.panel2.Controls.Add(this.lblTimer);
+            this.panel2.Controls.Add(this.lblWarningTimer);
             this.panel2.Location = new System.Drawing.Point(29, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(667, 256);
+            this.panel2.Size = new System.Drawing.Size(667, 285);
             this.panel2.TabIndex = 19;
             // 
             // lblCalender
@@ -229,7 +229,7 @@ namespace MyProfessional
             // 
             this.nudWarningTimer.AccessibleName = "0";
             this.nudWarningTimer.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::MyProfessional.Properties.Settings.Default, "WarningTimer", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudWarningTimer.Location = new System.Drawing.Point(363, 70);
+            this.nudWarningTimer.Location = new System.Drawing.Point(82, 142);
             this.nudWarningTimer.Maximum = new decimal(new int[] {
             5,
             0,
@@ -250,7 +250,7 @@ namespace MyProfessional
             // txtTitle
             // 
             this.txtTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::MyProfessional.Properties.Settings.Default, "Title", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtTitle.Location = new System.Drawing.Point(81, 115);
+            this.txtTitle.Location = new System.Drawing.Point(82, 95);
             this.txtTitle.MaxLength = 50;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(397, 39);
@@ -268,7 +268,7 @@ namespace MyProfessional
             0,
             0,
             0});
-            this.nudTimer.Location = new System.Drawing.Point(363, 25);
+            this.nudTimer.Location = new System.Drawing.Point(363, 140);
             this.nudTimer.Maximum = new decimal(new int[] {
             60,
             0,
@@ -294,9 +294,9 @@ namespace MyProfessional
             this.btnCronometerStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnCronometerStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCronometerStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCronometerStart.Location = new System.Drawing.Point(251, 29);
+            this.btnCronometerStart.Location = new System.Drawing.Point(251, 23);
             this.btnCronometerStart.Name = "btnCronometerStart";
-            this.btnCronometerStart.Size = new System.Drawing.Size(128, 70);
+            this.btnCronometerStart.Size = new System.Drawing.Size(128, 62);
             this.btnCronometerStart.TabIndex = 3;
             this.btnCronometerStart.Text = "شروع";
             this.btnCronometerStart.UseVisualStyleBackColor = false;
@@ -310,9 +310,9 @@ namespace MyProfessional
             this.btnCronometerPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnCronometerPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCronometerPause.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCronometerPause.Location = new System.Drawing.Point(251, 108);
+            this.btnCronometerPause.Location = new System.Drawing.Point(251, 91);
             this.btnCronometerPause.Name = "btnCronometerPause";
-            this.btnCronometerPause.Size = new System.Drawing.Size(128, 70);
+            this.btnCronometerPause.Size = new System.Drawing.Size(128, 62);
             this.btnCronometerPause.TabIndex = 4;
             this.btnCronometerPause.Text = "مکث";
             this.btnCronometerPause.UseVisualStyleBackColor = true;
@@ -326,9 +326,9 @@ namespace MyProfessional
             this.btnCronometerMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnCronometerMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCronometerMark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCronometerMark.Location = new System.Drawing.Point(117, 108);
+            this.btnCronometerMark.Location = new System.Drawing.Point(117, 23);
             this.btnCronometerMark.Name = "btnCronometerMark";
-            this.btnCronometerMark.Size = new System.Drawing.Size(128, 70);
+            this.btnCronometerMark.Size = new System.Drawing.Size(128, 62);
             this.btnCronometerMark.TabIndex = 3;
             this.btnCronometerMark.Text = "حذف مارک ها";
             this.btnCronometerMark.UseVisualStyleBackColor = false;
@@ -339,7 +339,7 @@ namespace MyProfessional
             this.lblCronometerMinute.AutoSize = true;
             this.lblCronometerMinute.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCronometerMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCronometerMinute.Location = new System.Drawing.Point(396, 32);
+            this.lblCronometerMinute.Location = new System.Drawing.Point(402, 18);
             this.lblCronometerMinute.Name = "lblCronometerMinute";
             this.lblCronometerMinute.Size = new System.Drawing.Size(54, 47);
             this.lblCronometerMinute.TabIndex = 14;
@@ -350,7 +350,7 @@ namespace MyProfessional
             this.lblCronometerSecond.AutoSize = true;
             this.lblCronometerSecond.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCronometerSecond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCronometerSecond.Location = new System.Drawing.Point(461, 32);
+            this.lblCronometerSecond.Location = new System.Drawing.Point(467, 18);
             this.lblCronometerSecond.Name = "lblCronometerSecond";
             this.lblCronometerSecond.Size = new System.Drawing.Size(54, 47);
             this.lblCronometerSecond.TabIndex = 12;
@@ -362,7 +362,7 @@ namespace MyProfessional
             this.lblCronometerPoints.BackColor = System.Drawing.Color.Transparent;
             this.lblCronometerPoints.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCronometerPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCronometerPoints.Location = new System.Drawing.Point(441, 29);
+            this.lblCronometerPoints.Location = new System.Drawing.Point(447, 15);
             this.lblCronometerPoints.Name = "lblCronometerPoints";
             this.lblCronometerPoints.Size = new System.Drawing.Size(29, 47);
             this.lblCronometerPoints.TabIndex = 13;
@@ -373,7 +373,7 @@ namespace MyProfessional
             this.lblCronometerMiniSecond.AutoSize = true;
             this.lblCronometerMiniSecond.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCronometerMiniSecond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCronometerMiniSecond.Location = new System.Drawing.Point(526, 32);
+            this.lblCronometerMiniSecond.Location = new System.Drawing.Point(532, 18);
             this.lblCronometerMiniSecond.Name = "lblCronometerMiniSecond";
             this.lblCronometerMiniSecond.Size = new System.Drawing.Size(54, 47);
             this.lblCronometerMiniSecond.TabIndex = 12;
@@ -385,7 +385,7 @@ namespace MyProfessional
             this.lblCronometerPoints2.BackColor = System.Drawing.Color.Transparent;
             this.lblCronometerPoints2.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCronometerPoints2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblCronometerPoints2.Location = new System.Drawing.Point(506, 29);
+            this.lblCronometerPoints2.Location = new System.Drawing.Point(512, 15);
             this.lblCronometerPoints2.Name = "lblCronometerPoints2";
             this.lblCronometerPoints2.Size = new System.Drawing.Size(29, 47);
             this.lblCronometerPoints2.TabIndex = 13;
@@ -396,7 +396,7 @@ namespace MyProfessional
             this.listBox1.Font = new System.Drawing.Font("Sahel SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 36;
-            this.listBox1.Location = new System.Drawing.Point(414, 86);
+            this.listBox1.Location = new System.Drawing.Point(420, 63);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(137, 112);
             this.listBox1.TabIndex = 20;
@@ -414,9 +414,9 @@ namespace MyProfessional
             this.btnCronometerStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnCronometerStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCronometerStop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnCronometerStop.Location = new System.Drawing.Point(117, 29);
+            this.btnCronometerStop.Location = new System.Drawing.Point(117, 91);
             this.btnCronometerStop.Name = "btnCronometerStop";
-            this.btnCronometerStop.Size = new System.Drawing.Size(128, 70);
+            this.btnCronometerStop.Size = new System.Drawing.Size(128, 62);
             this.btnCronometerStop.TabIndex = 5;
             this.btnCronometerStop.Text = "پایان";
             this.btnCronometerStop.UseVisualStyleBackColor = true;
@@ -436,9 +436,9 @@ namespace MyProfessional
             this.panel1.Controls.Add(this.btnCronometerStart);
             this.panel1.Controls.Add(this.btnCronometerMark);
             this.panel1.Controls.Add(this.btnCronometerPause);
-            this.panel1.Location = new System.Drawing.Point(29, 313);
+            this.panel1.Location = new System.Drawing.Point(29, 345);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(667, 207);
+            this.panel1.Size = new System.Drawing.Size(667, 175);
             this.panel1.TabIndex = 21;
             // 
             // label6

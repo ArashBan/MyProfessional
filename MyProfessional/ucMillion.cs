@@ -43,7 +43,8 @@ namespace MyProfessional
 
                 else _total = Convert.ToDouble(txtDefaultMoney.Text.Replace(",", "")) - BllMillion.SumMoney();
 
-                lblDefaultMoney.Text = $@"درآمد: {string.Format("{0:N0}", double.Parse(BllMillion.SumMoney().ToString().Replace(",", "")))} تومان | باقی مانده: {string.Format("{0:N0}", double.Parse(_total.ToString().Replace(",", "")))} تومان!";
+                lblDefaultMoney.Text =
+                    $@"درآمد: {string.Format("{0:N0}", double.Parse(BllMillion.SumMoney().ToString().Replace(",", "")))} تومان | باقی مانده: {string.Format("{0:N0}", double.Parse(_total.ToString().Replace(",", "")))} تومان!";
             }
         }
 

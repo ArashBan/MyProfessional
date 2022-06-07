@@ -29,14 +29,40 @@ namespace MyProfessional
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcHome));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblLength = new System.Windows.Forms.Label();
-            this.lblLine = new System.Windows.Forms.Button();
-            this.txtNote = new System.Windows.Forms.RichTextBox();
+            this.btnEditReminder = new System.Windows.Forms.Button();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnReminderSave = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblTodayCalender = new System.Windows.Forms.Label();
             this.lblQuickAccess = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAddressQuickAccess = new System.Windows.Forms.Button();
+            this.btnEditQuickAccess = new System.Windows.Forms.Button();
             this.txtQuickAccessName3 = new System.Windows.Forms.TextBox();
             this.txtQuickAccessName7 = new System.Windows.Forms.TextBox();
             this.txtQuickAccessName6 = new System.Windows.Forms.TextBox();
@@ -44,8 +70,7 @@ namespace MyProfessional
             this.txtQuickAccessName4 = new System.Windows.Forms.TextBox();
             this.txtQuickAccessName2 = new System.Windows.Forms.TextBox();
             this.txtQuickAccessName1 = new System.Windows.Forms.TextBox();
-            this.btnQuickAccessAddress = new System.Windows.Forms.Button();
-            this.btnQuickAccessName = new System.Windows.Forms.Button();
+            this.btnQuickAccessSave = new System.Windows.Forms.Button();
             this.btnQuickAccess4 = new System.Windows.Forms.Button();
             this.btnQuickAccess5 = new System.Windows.Forms.Button();
             this.btnQuickAccess3 = new System.Windows.Forms.Button();
@@ -55,75 +80,377 @@ namespace MyProfessional
             this.btnQuickAccess1 = new System.Windows.Forms.Button();
             this.lblCalender = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.panel2.Controls.Add(this.lblLength);
-            this.panel2.Controls.Add(this.lblLine);
-            this.panel2.Controls.Add(this.txtNote);
+            this.panel2.Controls.Add(this.btnEditReminder);
+            this.panel2.Controls.Add(this.checkBox8);
+            this.panel2.Controls.Add(this.checkBox7);
+            this.panel2.Controls.Add(this.checkBox6);
+            this.panel2.Controls.Add(this.checkBox5);
+            this.panel2.Controls.Add(this.checkBox4);
+            this.panel2.Controls.Add(this.checkBox3);
+            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.btnReminderSave);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblNote);
-            this.panel2.Location = new System.Drawing.Point(377, 28);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(319, 492);
             this.panel2.TabIndex = 1;
             // 
-            // lblLength
+            // btnEditReminder
             // 
-            this.lblLength.AutoSize = true;
-            this.lblLength.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblLength.Location = new System.Drawing.Point(139, 14);
-            this.lblLength.Name = "lblLength";
-            this.lblLength.Size = new System.Drawing.Size(48, 31);
-            this.lblLength.TabIndex = 9;
-            this.lblLength.Text = "طول";
+            this.btnEditReminder.FlatAppearance.BorderSize = 2;
+            this.btnEditReminder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnEditReminder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnEditReminder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditReminder.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
+            this.btnEditReminder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditReminder.Image = global::MyProfessional.Properties.Resources.Edit1;
+            this.btnEditReminder.Location = new System.Drawing.Point(3, 7);
+            this.btnEditReminder.Name = "btnEditReminder";
+            this.btnEditReminder.Size = new System.Drawing.Size(35, 35);
+            this.btnEditReminder.TabIndex = 12;
+            this.btnEditReminder.UseVisualStyleBackColor = true;
+            this.btnEditReminder.Click += new System.EventHandler(this.btnEditReminder_Click);
             // 
-            // lblLine
+            // checkBox8
             // 
-            this.lblLine.FlatAppearance.BorderSize = 2;
-            this.lblLine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
-            this.lblLine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
-            this.lblLine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLine.Font = new System.Drawing.Font("Sahel SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.lblLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblLine.Location = new System.Drawing.Point(5, 5);
-            this.lblLine.Name = "lblLine";
-            this.lblLine.Size = new System.Drawing.Size(120, 42);
-            this.lblLine.TabIndex = 3;
-            this.lblLine.Text = "خط فاصله";
-            this.lblLine.UseVisualStyleBackColor = true;
-            this.lblLine.Click += new System.EventHandler(this.lblLine_Click);
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox8.Location = new System.Drawing.Point(30, 437);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(18, 17);
+            this.checkBox8.TabIndex = 11;
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.Click += new System.EventHandler(this.checkBox8_Click);
             // 
-            // txtNote
+            // checkBox7
             // 
-            this.txtNote.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::MyProfessional.Properties.Settings.Default, "Note", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.txtNote.Location = new System.Drawing.Point(5, 52);
-            this.txtNote.MaxLength = 2000;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(309, 435);
-            this.txtNote.TabIndex = 2;
-            this.txtNote.Text = global::MyProfessional.Properties.Settings.Default.Note;
-            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox7.Location = new System.Drawing.Point(30, 387);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(18, 17);
+            this.checkBox7.TabIndex = 11;
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.Click += new System.EventHandler(this.checkBox7_Click);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox6.Location = new System.Drawing.Point(30, 337);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(18, 17);
+            this.checkBox6.TabIndex = 11;
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.Click += new System.EventHandler(this.checkBox6_Click);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox5.Location = new System.Drawing.Point(30, 287);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(18, 17);
+            this.checkBox5.TabIndex = 11;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.Click += new System.EventHandler(this.checkBox5_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox4.Location = new System.Drawing.Point(30, 237);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(18, 17);
+            this.checkBox4.TabIndex = 11;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Click += new System.EventHandler(this.checkBox4_Click);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox3.Location = new System.Drawing.Point(30, 187);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(18, 17);
+            this.checkBox3.TabIndex = 11;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.Click += new System.EventHandler(this.checkBox3_Click);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox2.Location = new System.Drawing.Point(30, 137);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(18, 17);
+            this.checkBox2.TabIndex = 11;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Click += new System.EventHandler(this.checkBox2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.Location = new System.Drawing.Point(30, 87);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
+            // 
+            // btnReminderSave
+            // 
+            this.btnReminderSave.FlatAppearance.BorderSize = 2;
+            this.btnReminderSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
+            this.btnReminderSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
+            this.btnReminderSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReminderSave.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReminderSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnReminderSave.Location = new System.Drawing.Point(3, 4);
+            this.btnReminderSave.Name = "btnReminderSave";
+            this.btnReminderSave.Size = new System.Drawing.Size(76, 41);
+            this.btnReminderSave.TabIndex = 3;
+            this.btnReminderSave.Text = "ذخیره";
+            this.btnReminderSave.UseVisualStyleBackColor = true;
+            this.btnReminderSave.Visible = false;
+            this.btnReminderSave.Click += new System.EventHandler(this.btnReminderSave_Click);
+            // 
+            // label9
+            // 
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label9.Location = new System.Drawing.Point(52, 425);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(247, 31);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "8. یادآور شماره هشتم";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label8
+            // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label8.Location = new System.Drawing.Point(52, 375);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(247, 31);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "7. یادآور شماره هفتم";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label7.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label7.Location = new System.Drawing.Point(52, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(247, 31);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "6. یادآور شماره ششم";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label6
+            // 
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(52, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 31);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "5. طراحی دیزاین";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(52, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(247, 31);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "4. خرید بسته اینترنت";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(52, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(247, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "3. سفارش از دیجی کالا";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(52, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(247, 31);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "2. تماس امروز ساعت 20";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label1
+            // 
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(52, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "1. ارائه برای امروز";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblNote
             // 
             this.lblNote.AutoSize = true;
-            this.lblNote.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote.ForeColor = System.Drawing.Color.White;
-            this.lblNote.Location = new System.Drawing.Point(231, 11);
+            this.lblNote.Location = new System.Drawing.Point(259, 12);
             this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(94, 36);
+            this.lblNote.Size = new System.Drawing.Size(63, 36);
             this.lblNote.TabIndex = 0;
-            this.lblNote.Text = "یادداشت";
+            this.lblNote.Text = "یادآور";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox2.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox2.Location = new System.Drawing.Point(52, 120);
+            this.textBox2.MaxLength = 30;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(247, 49);
+            this.textBox2.TabIndex = 19;
+            this.textBox2.Visible = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox8.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox8.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox8.Location = new System.Drawing.Point(52, 420);
+            this.textBox8.MaxLength = 30;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(247, 49);
+            this.textBox8.TabIndex = 19;
+            this.textBox8.Visible = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox7.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox7.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox7.Location = new System.Drawing.Point(52, 370);
+            this.textBox7.MaxLength = 30;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(247, 49);
+            this.textBox7.TabIndex = 19;
+            this.textBox7.Visible = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox6.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox6.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox6.Location = new System.Drawing.Point(52, 320);
+            this.textBox6.MaxLength = 30;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(247, 49);
+            this.textBox6.TabIndex = 19;
+            this.textBox6.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox5.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox5.Location = new System.Drawing.Point(52, 270);
+            this.textBox5.MaxLength = 30;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(247, 49);
+            this.textBox5.TabIndex = 19;
+            this.textBox5.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox4.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox4.Location = new System.Drawing.Point(52, 220);
+            this.textBox4.MaxLength = 30;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(247, 49);
+            this.textBox4.TabIndex = 19;
+            this.textBox4.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox3.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox3.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox3.Location = new System.Drawing.Point(52, 170);
+            this.textBox3.MaxLength = 30;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(247, 49);
+            this.textBox3.TabIndex = 19;
+            this.textBox3.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.textBox1.Font = new System.Drawing.Font("Sahel SemiBold", 16F, System.Drawing.FontStyle.Bold);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(52, 70);
+            this.textBox1.MaxLength = 30;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(247, 49);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.Visible = false;
             // 
             // lblTodayCalender
             // 
             this.lblTodayCalender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTodayCalender.Font = new System.Drawing.Font("Sahel", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayCalender.Font = new System.Drawing.Font("Sahel", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblTodayCalender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblTodayCalender.Location = new System.Drawing.Point(0, 0);
             this.lblTodayCalender.Name = "lblTodayCalender";
@@ -134,17 +461,19 @@ namespace MyProfessional
             // 
             // lblQuickAccess
             // 
-            this.lblQuickAccess.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuickAccess.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuickAccess.ForeColor = System.Drawing.Color.White;
-            this.lblQuickAccess.Location = new System.Drawing.Point(161, 11);
+            this.lblQuickAccess.Location = new System.Drawing.Point(85, 11);
             this.lblQuickAccess.Name = "lblQuickAccess";
-            this.lblQuickAccess.Size = new System.Drawing.Size(147, 36);
+            this.lblQuickAccess.Size = new System.Drawing.Size(230, 36);
             this.lblQuickAccess.TabIndex = 0;
             this.lblQuickAccess.Text = "دسترسی سریع";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
+            this.panel4.Controls.Add(this.btnAddressQuickAccess);
+            this.panel4.Controls.Add(this.btnEditQuickAccess);
             this.panel4.Controls.Add(this.txtQuickAccessName3);
             this.panel4.Controls.Add(this.txtQuickAccessName7);
             this.panel4.Controls.Add(this.txtQuickAccessName6);
@@ -152,8 +481,7 @@ namespace MyProfessional
             this.panel4.Controls.Add(this.txtQuickAccessName4);
             this.panel4.Controls.Add(this.txtQuickAccessName2);
             this.panel4.Controls.Add(this.txtQuickAccessName1);
-            this.panel4.Controls.Add(this.btnQuickAccessAddress);
-            this.panel4.Controls.Add(this.btnQuickAccessName);
+            this.panel4.Controls.Add(this.btnQuickAccessSave);
             this.panel4.Controls.Add(this.btnQuickAccess4);
             this.panel4.Controls.Add(this.btnQuickAccess5);
             this.panel4.Controls.Add(this.btnQuickAccess3);
@@ -166,6 +494,38 @@ namespace MyProfessional
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(319, 319);
             this.panel4.TabIndex = 18;
+            // 
+            // btnAddressQuickAccess
+            // 
+            this.btnAddressQuickAccess.FlatAppearance.BorderSize = 2;
+            this.btnAddressQuickAccess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnAddressQuickAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnAddressQuickAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddressQuickAccess.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
+            this.btnAddressQuickAccess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddressQuickAccess.Image = ((System.Drawing.Image)(resources.GetObject("btnAddressQuickAccess.Image")));
+            this.btnAddressQuickAccess.Location = new System.Drawing.Point(44, 8);
+            this.btnAddressQuickAccess.Name = "btnAddressQuickAccess";
+            this.btnAddressQuickAccess.Size = new System.Drawing.Size(35, 35);
+            this.btnAddressQuickAccess.TabIndex = 12;
+            this.btnAddressQuickAccess.UseVisualStyleBackColor = true;
+            this.btnAddressQuickAccess.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnEditQuickAccess
+            // 
+            this.btnEditQuickAccess.FlatAppearance.BorderSize = 2;
+            this.btnEditQuickAccess.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(75)))), ((int)(((byte)(130)))));
+            this.btnEditQuickAccess.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(45)))), ((int)(((byte)(75)))));
+            this.btnEditQuickAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditQuickAccess.Font = new System.Drawing.Font("Sahel", 18F, System.Drawing.FontStyle.Bold);
+            this.btnEditQuickAccess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnEditQuickAccess.Image = global::MyProfessional.Properties.Resources.Edit1;
+            this.btnEditQuickAccess.Location = new System.Drawing.Point(3, 8);
+            this.btnEditQuickAccess.Name = "btnEditQuickAccess";
+            this.btnEditQuickAccess.Size = new System.Drawing.Size(35, 35);
+            this.btnEditQuickAccess.TabIndex = 12;
+            this.btnEditQuickAccess.UseVisualStyleBackColor = true;
+            this.btnEditQuickAccess.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtQuickAccessName3
             // 
@@ -258,37 +618,22 @@ namespace MyProfessional
             this.txtQuickAccessName1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtQuickAccessName1.Visible = false;
             // 
-            // btnQuickAccessAddress
+            // btnQuickAccessSave
             // 
-            this.btnQuickAccessAddress.FlatAppearance.BorderSize = 2;
-            this.btnQuickAccessAddress.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
-            this.btnQuickAccessAddress.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
-            this.btnQuickAccessAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccessAddress.Font = new System.Drawing.Font("Sahel SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnQuickAccessAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnQuickAccessAddress.Location = new System.Drawing.Point(3, 6);
-            this.btnQuickAccessAddress.Name = "btnQuickAccessAddress";
-            this.btnQuickAccessAddress.Size = new System.Drawing.Size(80, 42);
-            this.btnQuickAccessAddress.TabIndex = 3;
-            this.btnQuickAccessAddress.Text = "مسیر";
-            this.btnQuickAccessAddress.UseVisualStyleBackColor = true;
-            this.btnQuickAccessAddress.Click += new System.EventHandler(this.btnQuickAccessAddress_Click);
-            // 
-            // btnQuickAccessName
-            // 
-            this.btnQuickAccessName.FlatAppearance.BorderSize = 2;
-            this.btnQuickAccessName.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
-            this.btnQuickAccessName.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
-            this.btnQuickAccessName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccessName.Font = new System.Drawing.Font("Sahel SemiBold", 14F, System.Drawing.FontStyle.Bold);
-            this.btnQuickAccessName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnQuickAccessName.Location = new System.Drawing.Point(86, 6);
-            this.btnQuickAccessName.Name = "btnQuickAccessName";
-            this.btnQuickAccessName.Size = new System.Drawing.Size(80, 42);
-            this.btnQuickAccessName.TabIndex = 3;
-            this.btnQuickAccessName.Text = "نام";
-            this.btnQuickAccessName.UseVisualStyleBackColor = true;
-            this.btnQuickAccessName.Click += new System.EventHandler(this.btnQuickAccessName_Click);
+            this.btnQuickAccessSave.FlatAppearance.BorderSize = 2;
+            this.btnQuickAccessSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
+            this.btnQuickAccessSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
+            this.btnQuickAccessSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuickAccessSave.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccessSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnQuickAccessSave.Location = new System.Drawing.Point(3, 5);
+            this.btnQuickAccessSave.Name = "btnQuickAccessSave";
+            this.btnQuickAccessSave.Size = new System.Drawing.Size(76, 41);
+            this.btnQuickAccessSave.TabIndex = 3;
+            this.btnQuickAccessSave.Text = "ذخیره";
+            this.btnQuickAccessSave.UseVisualStyleBackColor = true;
+            this.btnQuickAccessSave.Visible = false;
+            this.btnQuickAccessSave.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnQuickAccess4
             // 
@@ -297,7 +642,7 @@ namespace MyProfessional
             this.btnQuickAccess4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess4.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess4.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess4.Location = new System.Drawing.Point(162, 187);
             this.btnQuickAccess4.Name = "btnQuickAccess4";
@@ -314,7 +659,7 @@ namespace MyProfessional
             this.btnQuickAccess5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess5.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess5.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess5.Location = new System.Drawing.Point(3, 187);
             this.btnQuickAccess5.Name = "btnQuickAccess5";
@@ -331,7 +676,7 @@ namespace MyProfessional
             this.btnQuickAccess3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess3.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess3.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess3.Location = new System.Drawing.Point(3, 120);
             this.btnQuickAccess3.Name = "btnQuickAccess3";
@@ -348,7 +693,7 @@ namespace MyProfessional
             this.btnQuickAccess7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess7.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess7.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess7.Location = new System.Drawing.Point(3, 254);
             this.btnQuickAccess7.Name = "btnQuickAccess7";
@@ -365,7 +710,7 @@ namespace MyProfessional
             this.btnQuickAccess6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess6.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess6.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess6.Location = new System.Drawing.Point(162, 254);
             this.btnQuickAccess6.Name = "btnQuickAccess6";
@@ -382,7 +727,7 @@ namespace MyProfessional
             this.btnQuickAccess2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess2.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess2.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess2.Location = new System.Drawing.Point(162, 120);
             this.btnQuickAccess2.Name = "btnQuickAccess2";
@@ -399,7 +744,7 @@ namespace MyProfessional
             this.btnQuickAccess1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(81)))), ((int)(((byte)(103)))));
             this.btnQuickAccess1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnQuickAccess1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuickAccess1.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuickAccess1.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuickAccess1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnQuickAccess1.Location = new System.Drawing.Point(3, 53);
             this.btnQuickAccess1.Name = "btnQuickAccess1";
@@ -412,9 +757,9 @@ namespace MyProfessional
             // lblCalender
             // 
             this.lblCalender.AutoSize = true;
-            this.lblCalender.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalender.Font = new System.Drawing.Font("Sahel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalender.ForeColor = System.Drawing.Color.White;
-            this.lblCalender.Location = new System.Drawing.Point(234, 11);
+            this.lblCalender.Location = new System.Drawing.Point(230, 11);
             this.lblCalender.Name = "lblCalender";
             this.lblCalender.Size = new System.Drawing.Size(92, 36);
             this.lblCalender.TabIndex = 0;
@@ -430,6 +775,27 @@ namespace MyProfessional
             this.panel1.Size = new System.Drawing.Size(319, 145);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(377, 28);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(319, 492);
+            this.panel3.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sahel SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(257, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 36);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "یادآور";
+            // 
             // UcHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 31F);
@@ -437,7 +803,7 @@ namespace MyProfessional
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Sahel SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UcHome";
@@ -450,6 +816,8 @@ namespace MyProfessional
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -458,10 +826,7 @@ namespace MyProfessional
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblNote;
-        public System.Windows.Forms.RichTextBox txtNote;
-        private System.Windows.Forms.Button lblLine;
         private System.Windows.Forms.Label lblTodayCalender;
-        private System.Windows.Forms.Label lblLength;
         private System.Windows.Forms.Label lblQuickAccess;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnQuickAccess4;
@@ -471,10 +836,8 @@ namespace MyProfessional
         private System.Windows.Forms.Button btnQuickAccess7;
         private System.Windows.Forms.Button btnQuickAccess5;
         private System.Windows.Forms.Button btnQuickAccess3;
-        private System.Windows.Forms.Button btnQuickAccessAddress;
         private System.Windows.Forms.Label lblCalender;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnQuickAccessName;
         private System.Windows.Forms.TextBox txtQuickAccessName1;
         private System.Windows.Forms.TextBox txtQuickAccessName2;
         private System.Windows.Forms.TextBox txtQuickAccessName3;
@@ -482,5 +845,36 @@ namespace MyProfessional
         private System.Windows.Forms.TextBox txtQuickAccessName4;
         private System.Windows.Forms.TextBox txtQuickAccessName7;
         private System.Windows.Forms.TextBox txtQuickAccessName6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button btnEditReminder;
+        private System.Windows.Forms.Button btnEditQuickAccess;
+        private System.Windows.Forms.Button btnAddressQuickAccess;
+        private System.Windows.Forms.Button btnQuickAccessSave;
+        private System.Windows.Forms.Button btnReminderSave;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

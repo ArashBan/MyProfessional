@@ -33,13 +33,13 @@ namespace MyProfessional
             this.btnBackup = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblAboutText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblBackup = new System.Windows.Forms.Label();
             this.pane3 = new System.Windows.Forms.Panel();
             this.lblChanges = new System.Windows.Forms.Label();
             this.lblUpdate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.pane3.SuspendLayout();
@@ -53,7 +53,7 @@ namespace MyProfessional
             this.btnBackup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnBackup.Location = new System.Drawing.Point(40, 275);
+            this.btnBackup.Location = new System.Drawing.Point(40, 276);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(250, 40);
             this.btnBackup.TabIndex = 0;
@@ -68,7 +68,7 @@ namespace MyProfessional
             this.btnRestore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(83)))));
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRestore.Location = new System.Drawing.Point(40, 321);
+            this.btnRestore.Location = new System.Drawing.Point(40, 322);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(250, 40);
             this.btnRestore.TabIndex = 1;
@@ -79,23 +79,12 @@ namespace MyProfessional
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MyProfessional.Properties.Resources.Backup;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 250);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblAboutText
-            // 
-            this.lblAboutText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAboutText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblAboutText.Location = new System.Drawing.Point(0, 0);
-            this.lblAboutText.Name = "lblAboutText";
-            this.lblAboutText.Size = new System.Drawing.Size(667, 80);
-            this.lblAboutText.TabIndex = 1;
-            this.lblAboutText.Text = "نسخه 1.6 - نسخه شما به روز است.\r\nتمام حقوق مای پروفشنال، 2021 - 2022 محفوظ است.";
-            this.lblAboutText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -148,18 +137,29 @@ namespace MyProfessional
             this.lblUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblUpdate.Location = new System.Drawing.Point(14, 63);
             this.lblUpdate.Name = "lblUpdate";
-            this.lblUpdate.Size = new System.Drawing.Size(315, 1271);
+            this.lblUpdate.Size = new System.Drawing.Size(315, 1240);
             this.lblUpdate.TabIndex = 1;
             this.lblUpdate.Text = resources.GetString("lblUpdate.Text");
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(38)))), ((int)(((byte)(60)))));
-            this.panel1.Controls.Add(this.lblAboutText);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(29, 440);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(667, 80);
             this.panel1.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(667, 80);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "**طراحی و توسعه: آرش بنی آشکار - دانیال درویش**";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UcSettings
             // 
@@ -188,12 +188,12 @@ namespace MyProfessional
         private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblAboutText;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblBackup;
         private System.Windows.Forms.Panel pane3;
         private System.Windows.Forms.Label lblChanges;
         private System.Windows.Forms.Label lblUpdate;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
